@@ -37,14 +37,35 @@
 	    \\
 \chapter{Projektbeschreibung}
 
+Aus dem Projekt soll eine Software hervorgehen, die auf einer bestehenden Lösung basierend, eine VPN-Verbindung mit Hilfe von Peer-to-Peer Technologie aufbaut. Die Software ist prinzipiell für Benutzer gedacht die über wenig Know-How verfügen und soll ohne weitere Einstellungen funktionieren. Das Programm muss dazu lediglich gestartet werden. Allerdings wird es, speziell für erfahrenere Benutzer, Optionen geben, die den Funktionsumfang wesentlich erweitern z.B. Internetfreigabe, Portweiterleitung, etc.
+
 
 \chapter{Voruntersuchung des Produkts}
 	\section{Ist-Erhebung}
 	
+	Als VPN (Virtual Privacy Network) wird ein verschlüsseltes privates Netzwerk bezeichnet, dass entweder über einen Server oder über die einzelnen Benutzer (Peer-to-Peer) aufgebaut wird. Auf dieses Netzwerk haben grundsätzlich nur die eigentlichen Teilnehmer dessen Zugriff und verspricht durch die Verschlüsselung ebenfalls eine hohe Sicherheit, die bis zu einem gewissen Grad nicht zurückverfolgt werden kann. Allerdings kann ein VPN auch dazu genutzt werden gewisse Barrieren zu umgehen, um z.B. eine Verbindung ins Intranet einer Firma herzustellen und dort auf einen lokalen Server zuzugreifen. Mit einer VPN-Verbindung ist es damit auch möglich Zensur oder nationale Sperren von Inhalt zu umgehen und damit abrufen zu können. Im folgenden ist eine Marktanalyse ausgeführt um existente Dienste und ihre Schwächen aufzuzeigen:
 	
+	Hamachi: ist ein gehosteter VPN-Service, über den Benutzer miteinander durch Netzwerke verbunden werden können. Es erlaubt mehrere Netzwerke zu erstellen, zu verwalten und basiert prinzipiell zu einem großen Teil auf Peer-to-Peer. Erst wenn keine direkte Verbindung hergestellt werden kann wird der Client über einen Server mit dem restlichen Netzwerk verbunden. Ein großer Nachteil hierbei ist, dass, durch die Verbindung über einen Server, die Kompatibilität mit anderen Programmen leidet. Dies hat unter Umständen zur Folge, dass die Verbindung sehr langsam wird oder gar nicht mehr funktioniert. Ein weiterer großer Nachteil des Dienstes ist, dass in der kostenlosen Version, sich nur eine begrenzte Anzahl von Benutzern in ein Netzwerk einloggen kann. Da diese Obergrenze leider sehr gering ist, wird ein vernünftiges Arbeiten im Netzwerk manchmal nicht mehr möglich. Abgesehen davon ist die Benutzbarkeit des GUI zwar vergleichsweise gut, jedoch kann die allgemeine Geschwindigkeit des Programms selbst als eher schlecht bewertet werden. Diesen Missstand versucht unsere Software durch bessere Geschwindigkeit im eigentlichen Programm und großem Funktionsumfang auszugleichen. Insbesondere die Verbindung über einen Server soll wegfallen und zur Gänze auf Peer-to-Peer basieren um höhere Kompatibilität und Geschwindigkeit sicherzustellen.
+	
+	OpenVPN GUI: bietet eine grafische Oberfläche zur bekannten VPN-Lösung OpenVPN. Sie ist äußerst minimalistisch gehalten und bietet nur wenige Einstellungen, wie Proxy und Sprache. Alle anderen Einstellungen sind ausschließlich in dem für die Verbindung vorgesehenen OpenVPN Config-File zu tätigen. Alleine dies könnte einen unerfahrenen Benutzer bereits überfordern. Zwar existieren im Netz diverse Config-File Editoren um jene zu erstellen und zu editieren, allerdings sind auch diese nicht immer leicht zu handhaben. Darüber hinaus ist ein eventuelles Troubleshooting, dass über eine triviale Neuinstallation hinaus geht für einen unerfahrenen Benutzer einfach nicht zumutbar und erfordert auch für erfahrenere Benutzer oft mehrere Stunden Aufwand um ein Problem zu lösen. Auch die Meldungen in der Konsole der Anwendung sind für einen Laien sicherlich alles andere als verständlich was ein eventuelles Troubleshooting umso komplizierter macht. Abgesehen davon basiert OpenVPN in erster Linie auf einer Client-Server Architektur, welches einerseits genau das Gegenteil von dem ist was aus diesem Projekt hervorgehen soll und andererseits der Server zu OpenVPN alles andere als einfach zu installieren ist. Aufgrund dieser analysierten Standpunkte und der Tatsache, dass OpenVPN auf einer Client-Server Architektur basiert, hebt sich dieses Projekt sichtlich davon ab.
+	
+	Tortilla: ist ein Windows Tool um die Benutzung des Tor Netzwerkes einfacher zu gestalten. TOR funktioniert dezentral und wird von Freiwilligen betrieben die Bandbreite und Storage zur Verfügung stellen. Der Traffic wird nach dem Prinzip des Onion-Routings über sich ändernde Routen gesendet und wird auch zwischen den beteiligten Netzwerkteilnehmern verschlüsselt. TOR oder Tortilla hat zwar mit diesem Projekt in seiner Grundform nur wenig zu tun und hat auch ein komplett anderes Gebiet abdeckt(allerdings trotzdem wert analysiert zu werden), da eine Implementierung von TOR bzw. Onion-Routing in die Software, die aus diesem Projekt hervorgehen soll, nicht ausgeschlossen ist, was Tortilla theoretisch überflüssig machen würde. 
+	
+	ShellfireVPN: ist ein VPN-Dienst der in der kostenlosen Version, ausschließlich eine Unterstützung für Windows bietet und in seiner Funktionalität sehr eingeschränkt ist. Auch die Bandbreite und Sicherheit ist in der kostenlosen Version stark begrenzt. Darüber hinaus basiert ShellfireVPN auf OpenVPN und damit auf einer Server-Client Architektur. Wenn mehr Bandbreite gefordert ist, wird der Dienst kostenpflichtig. Im Gegensatz zu diesem Dienst zeichnet sich unsere Software wiederum dadurch aus, dass sie ohne Server auskommen wird, d.h. auf Peer-to-Peer Prinzip basiert. Des weiteren hebt sie sich auch deswegen ab, da sie was die Bandbreite angeht grundsätzlich keine Grenzen hat solange die Benutzer die entsprechende Bandbreite und ihre Internetverbindung von sich aus zur Verfügung stellen. Auch hat der Benutzer in der kostenlosen Version von ShellfireVPN ausschließlich Zugang zu Servern in Deutschland, weswegen unsere Software dem Dienst ebenfalls überlegen ist, da sie theoretisch an keine nationalen Grenzen gebunden ist solange sich Benutzer aus den entsprechenden Ländern im Netzwerk befinden und ihre Internetverbindung zur Verfügung stellen. Der einzige Punkt wo der Dienst mit unserer Software grundsätzlich gleichzieht ist die Benutzerfreundlichkeit, welche gemessen an anderen Lösungen überdurchschnittlich ist.
+	
+	CyberGhost VPN: ist ein weiterer Dienst der scheinbar auf OpenVPN aufsetzt und in der kostenlosen Version eingeschränkte Funktionalität und begrenzte Bandbreite bietet. Benutzerfreundlichkeit ist ebenfalls gemessen an anderen Lösungen überdurchschnittlich und auch ist der Vorgang der im Hintergrund abläuft speziell für den Laien abstrahiert. Auch hier fallen zusätzliche Kosten für mehr Bandbreite an und man ist an die Verfügbarkeit der Server in den entsprechenden Ländern gebunden. Im Direktvergleich mit unserer geplanten Software, hat sie ähnliche Vorteile gegenüber diesem Dienst wie auch schon beim Dienst ShellfireVPN beschrieben, also zusammengefasst: basiert auf Peer-to-Peer, prinzipiell keine Bandbreitenbeschränkungen, grundsätzlich nicht an Verfügbarkeiten in bestimmten Ländern gebunden.
+	
+		
 	\section{Soll-Zustand}
 		
 		\subsection{Allgemeine Beschreibung}
+		
+		Im Rahmen des Projektes soll eine leicht bedienbare Software entwickelt werden, die den Aufbau eines virtuellen lokalen Netzwerkes sicherstellt. Wichtig ist dabei, dass diese Software nicht auf einer Server-Client Architektur basiert, sondern mit Hilfe einer Peer-to-Peer Lösung realisiert wird. Dabei ist zu beachten, dass es kein Ziel ist diese Lösung selbst zu entwickeln sondern lediglich die Software, eine zugehörige Benutzeroberfläche und die Funktionalitäten die auf eine bestehende Lösung aufgesetzt werden.
+		
+		Zu den wichtigsten Punkten gehören gute Kompatibilität und Performance die grundsätzlich zu jeder Zeit von der Software gewährleistet werden muss. Um dies sicherzustellen können Programmprofile angelegt werden, in denen bestimmte Optionen im Verhalten der Software, im Umgang mit bestimmten Programmen definiert und gespeichert werden können. Da die Software auch für Benutzer mit wenig Erfahrung gedacht ist, wird sehr viel wert auf eine intuitive aber möglichst dezente Benutzeroberfläche wertgelegt.
+		
+		Darüber hinaus wird es die Möglichkeit geben, innerhalb dieses privaten Netzwerks, seine Internetverbindung zur Verfügung zu stellen bzw. dann auch über andere Benutzer sich mit dem Internet zu verbinden.
+		
 			
 		\subsection{Muss-Ziele}
 			
@@ -60,6 +81,8 @@
 	\section{Festlegen der Hauptleistungen}
 		
 	\section{Festlegen der wichtigsten Aspekte der Benutzerschnittstelle}
+		
+		Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden und einige Eingewöhnungszeit benötigen. Deshalb wird die Benutzerschnittstelle, aber auch das Programm selbst, besonders intuitiv und einfach verwendbar sein und die wichtigsten Funktionen möglichst einfach zu erreichen sein. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann bereits nach dem Start der Software verwendet werden.
 		
 	\section{Festlegen der wichtigsten Qualit\"atsmerkmale}
 		
@@ -77,7 +100,9 @@
 	
 		\subsection{Programmiersprachen}
 		
-		\subsection{Datenbank Management System (DBMS)}	
+		Da dieses Projekt auf einem bereits bestehenden Programm aufsetzt ist die Programmiersprache bis zu einem gewissen Grad vorgegeben. Es besteht zwar durchaus die Möglichkeit auch andere Sprachen zu verwenden, das verursacht jedoch ungerechtfertigten Aufwand der keine ausreichenden Vorteile bieten kann, weshalb dieses Projekt in C++ durchgeführt wird.
+		
+		
 		
 		\subsection{Entwicklungsumgebung}
 		
@@ -89,20 +114,36 @@
 			
 		\subsection{Hardwaretechnische Durchf\"uhrbarkeit}
 			
+		Da dieses Projekt grundsätzlich keine speziellen hardwaretechnischen Ansprüche stellt, 
+		kann die hardwaretechnische Durchführbarkeit entfallen und muss nicht geprüft werden.
+		
+			
 		\subsection{Verfügbarkeit von Entwicklungs- und Zielmaschinen}
+			
+		Die entwickelte Software wird auf normalen PCs entwickelt und ist auch ausschließlich für jene gedacht. Deshalb ist die Verfügbarkeit von Entwicklungs- und Zielmaschinen, für die Fertigstellung und den Einsatz der Software, irrelevant.
 			
 	\section{Pr\"ufen der personellen Durchf\"uhrbarkeit}
 		
 		\subsection{Qualifikation der Fachkr\"afte}
 			
+		
+		Das gesamte Projektteam kann bereits mit einiger netzwerktechnischen Erfahrung aufwarten und hat sich ebenfalls bereits mit VPN-Software jeglicher Art in der Vergangenheit beschäftigt. Darüber hinaus verfügt das Team über ein hohes Maß an softwaretechnischem Wissen und hat bereits Erfahrung mit einigen Programmiersprachen. Da die Software zum größten Teil, wenn nicht sogar zur Gänze, in Java geschrieben wird und das Team speziell mit dieser Programmiersprache bereits jahrelange Erfahrung mitbringt, sieht es sich imstande das Projekt zu einem erfolgreichen und zufriedenstellenden Ende führen.
+		
 		\subsection{Zusammenarbeit der Teammitglieder}
+		
+		
+		Da die Teammitglieder schon öfters in dieser Gruppenzusammensetzung gearbeitet haben und es sich daher als eingespieltes Team bezeichnen kann, gehen wir davon aus, dass dies auch in diesem Projekt zu einem positiven Abschluss beiträgt.
+		
+		Weiters wurden bereits im Vorfeld möglichst effiziente Organisationsstrukturen und Kommunikationsplattformen geschaffen, welche der Effizienz der Projektarbeit eine Steigerung verschaffen sollten.
 			
 	\section{Risikoanalyse}
 		
 		\subsection{Personelle Risiken}
-			
+		Da dieses Projekt von einem Team, bestehend aus 4 Mitgliedern bearbeitet wird und der schlimmste Fall, das mehrere Teammitglieder über einen größeren Zeitraum gleichzeitig ausfallen, eher eine große Ausnahme darstellt, sehen wir keine größeren Personellen Risiken an diesem Projekt.
+		
 		\subsection{Technische Risiken}
-			
+		Neben technischen Risiken wie zu hoch gesteckte Ziele und zu geringes technisches Know-How, welche als eher gering eingestuft werden können, ist das Risiko, dass den verwendeten VPN-Treiber betrifft, umso höher. Auf diesen hat das Projektteam in Funktionsweise und -umfang kaum bis keinen Einfluss und muss sich voll und ganz auf ihn verlassen können. Mögliche Risiken die es beim verwendeten VPN-Treiber zu berücksichtigen gilt, sind fehlender Funktionsumfang, nicht vorhergesehene Funktionsweisen oder zu hoher Aufwand um bestimmte Projektziele, mit dem Treiber als Grundlage, zu erreichen. Deshalb ist die Auswahl eines geeigneten VPN-Treibers besonders essentiell, um das Risiko dahingehend möglichst zu minimieren. 
+		
 	\section{Pr\"ufen der \"Okonomischen Durchf\"uhrbarkeit}
 		
 		\subsection{Terminsch\"atzung}
@@ -118,7 +159,11 @@
 	
 	\section{Nutzen f\"ur den Kunden}
 	
+	Die Software wird sich von anderen Lösungen auf diesem Gebiet vor allem dadurch abheben, dass sie eine höhere Programmkompatibilität bietet, mit welcher andere Programme schlichtweg nicht mithalten können. Gleichzeitig wird die Software auch mit einer höheren Effizienz und Stabilität aufwarten können, was sie zusätzlich auszeichnet.
+	
 	\section{Nutzen f\"ur das Projektteam}
+	
+	Der Nutzen für das Team besteht in erster Linie in der Aneignung neuer Erfahrungen und Fähigkeiten in den Bereichen der Teamarbeit, Projektarbeit sowie Java-Programmierung. Ebenso wird das Team durch die genaue Auseinandersetzung mit VPN und Load-Balancing auch dahingehend einige Informationen und Erfahrungen sammeln.
 	
 
 \end{document}
