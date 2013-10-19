@@ -18,34 +18,77 @@
 \tableofcontents
 
 \chapter{Projekt-Team}
-	
+	\begin{itemize}
+	\item Dominik Backhausen (Teammitglied)
+	\item Alexander Rieppel (Teammitglied)
+	\item Daniel Dimitriejvic (Teammitglied)
+	\item Thomas Traxler (Projektleiter)
+	\end{itemize}
 	
 	
 \chapter{Zielbestimmung}
+	\begin{itemize}
+	\item Peer-to-Peer Prinzip
+	\item Erstellung von LAN-Netzwerken
+	\item intuitives GUI-Design
+	\item Profilmanager für verschiedene Programme und zugehörige Programmprofile
+	\item Einstellungsmenü für erweiterte Einstellungen
+	\item Netzwerkteilnehmerliste
+	\item Weiterleitung der Internetverbindung eines Teilnehmers in sein LAN-Netzwerk
+	\item Einstellung ob die Internetverbindung des LAN-Netzwerks oder die eigene verwendet werden soll
+	\end{itemize}
 	
+	\section{Zulässige Erweiterungen}
+	
+	\begin{itemize}
+	\item Zugriffspunkt für die Internetverbindung in einem LAN-Netzwerk nach bestimmten Kriterien aussuchen lassen, wobei dies entweder manuell oder über einen Algorithmus erfordern kann
+	\item Ports am Internetzugriffspunkt zu bestimmten Netzwerkteilnehmern weiterleiten
+	\item Gemeinsame Ordner erstellen und bestimmten Netzwerkteilnehmern freigeben
+	\item Onion-Routing (Pfadauswahl auch durch Kriterien möglich)
+	\item Erweiterte Einstellungen für erfahrene Benutzer
+	
+	\end{itemize}
+	
+	\section{Unzulässige Erweiterungen / Nichtziele}
+	
+	\begin{itemize}
+	\item Es ist kein Ziel die Software nach ihrer Fertigstellung proprietär zu vermarkten
+	\item Es ist kein Ziel auf einer eigenen VPN-Lösung aufzusetzen
+	
+	\end{itemize}
 	
 	
 \chapter{Produkteinsatz}
 	
 	\section{Anwendungsbereiche}
+	 Die Software ist in erster Linie für Firmen gedacht die ein schnelles und einfaches VPN-Netzwerk benötigen. Dabei ist wichtig, dass verschiedenste Varianten dieses Szenarios denkbar sind, wie z.B. Mitarbeiter die international, auf allen Kontinenten verteilt, miteinander sicher kommunizieren müssen und gleichzeitig, im selben Netzwerk, Zugriff auf die internen Dienste der Firma benötigen (Server, Datenbank, etc.). Da aber die Software auch dafür ausgelegt ist, mit möglichst vielen verschiedenen Programmen zu funktionieren, sind die Anwendungsbereiche vielfältig und können nicht eindeutig definiert werden. Deshalb ist sie nicht nur für Firmen, sondern auch für Privatpersonen interessant die ein VPN-Netzwerk einrichten wollen, aber dabei möglichst flexibel, benutzerfreundlich und sich die komplizierte Einrichtung eines VPN-Servers ersparen möchten. 
 	 	
 		
 		
 		
 	\section{Zielgruppe}
+	
+	Generell kann man die Zielgruppe auf folgende großen Gruppen einschränken:
+	\begin{itemize}
+	\item Firmen
+	\item Private Personen mit dem Wunsch eines VPN-Netzwerks
+	\end{itemize}
+	
+	
 		
 		
 	\section{Betriebsbedingungen}
-		
+	Die einzige Anforderung die unser Produkt haben wird, ist ein PC mit einer funktionierenden Internetverbindung. 	
 		
 \chapter{Produktumgebung}
 	
 	\section{Software}
 		
-		
+		Es ist bis auf die ausgewählte VPN-Basis keine andere Software von Nöten um unser Programm zu verwenden
 		
 	\section{Hardware}
 		
+	Die Software wird auf normalen PCs entwickelt und ist auch ausschließlich für jene gedacht. 
 		
 		
 	\section{Produktschnittstellen}
@@ -54,16 +97,46 @@
 		
 \chapter{Produktfunktionen}
 	
+	
 		
 \chapter{Produktdaten}
 	
-
+	\textbf{/HD10/ Nickname}	
+	
+	Gespeicherter Nickname und Identität zur Authentifikation
+	
+	\textbf{/HD20/ Gespeicherte LAN-Netzwerke}
+	
+	LAN-Netzwerke die der Benutzer für die spätere Verwendung abgespeichert hat
+	
+	\textbf{/HD30/ Einstellungen}
+	
+	Vorgenommene Einstellungen in der Software
+	
+	\textbf{/HD40/ Programmprofile}
+	
+	Profile für Programmkompatibilität
 
 \chapter{Produktleistungen}
+\textbf{/LL10/ Optimierter Datenverkehr durch Peer-to-Peer}
+	
+	Da hier keine Server-Client Architektur verwendet wird, ist auch der Datenverkehr, der über einen einzigen Netzwerkteilnehmer geführt wird, deutlich geringer.
+	
+\textbf{/LL20/ Hohe Erweiterbarkeit der Software durch vorausschauend geplantes Programmdesign}
+	
+\textbf{/LL30/ Hohe Kompatibilität zu verschiedensten Programmen}
+	
+	Bei der Entwicklung der Software wird besonders darauf geachtet, dass sie mit verschiedensten Programmen kompatibel ist. Da dies natürlich nicht immer vom Programm selbst gewährleistet werden kann, wird es hierfür einen Profilmanager geben. Dieser ist speziell dafür gedacht Programmprofile zu Programmen zu erstellen die eine spezielle Konfiguration des Netzwerks oder des Netzwerkteilnehmers erfordern.
+	
+\textbf{/LL40/ Hohe Performanz}
+	
+	Hiermit ist sowohl Performanz innerhalb des Programms, als auch im Netzwerk gemeint.
+	
 	
 	
 	
 \chapter{Benutzerschnittstelle}
+	Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden und einige Eingewöhnungszeit benötigen. Deshalb wird die Benutzerschnittstelle, aber auch das Programm selbst, besonders intuitiv und einfach verwendbar sein um die wichtigsten Funktionen möglichst einfach erreichen zu können. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann bereits nach dem Start der Software verwendet werden.
 	
 	
 	
