@@ -68,33 +68,164 @@ Aus dem Projekt soll eine Software hervorgehen, die auf einer bestehenden Lösun
 		
 			
 		\subsection{Muss-Ziele}
+		Ziel dieses Projektes ist es eine Software zur Verwaltung von VPN-Verbindungen zu entwickeln, mit dessen Hilfe eine Verbindung zu einem VPN aufgebaut werden kann. Das Programm soll folgende Ziele erreichen:\\
+		\begin{itemize}
+		\item Peer-to-Peer Prinzip
+		\item Erstellung von LAN-Netzwerken
+		\item intuitives GUI-Design
+		\item Profilmanager für verschiedene Programme und zugehörige Programmprofile
+		\item Einstellungsmenü für erweiterte Einstellungen
+		\item Netzwerkteilnehmerliste
+		\item Weiterleitung der Internetverbindung eines Teilnehmers in sein LAN-Netzwerk
+		\item Einstellung ob die Internetverbindung des LAN-Netzwerks oder die eigene verwendet werden soll
+		
+		\end{itemize}
+		
 			
 		\subsection{Kann-Ziele}
+			Zusätzlich zu den erforderlichen Funktionen sind auch verschiedene zusätzliche Funktionen geplant, die allerdings für einen reibungslosen Einsatz der Software nicht benötigt werden.
+			Folgende erweiterte Funktionen sind geplant:
+			\begin{itemize}
+			\item Zugriffspunkt für die Internetverbindung in einem LAN-Netzwerk nach bestimmten Kriterien aussuchen lassen, wobei dies entweder manuell oder über einen Algorithmus erfordern kann
 			
+			\item Ports am Internetzugriffspunkt zu bestimmten Netzwerkteilnehmern weiterleiten
+			\item Gemeinsame Ordner erstellen und bestimmten Netzwerkteilnehmern freigeben
+			
+			\item Onion-Routing (Pfadauswahl auch durch Kriterien möglich)
+			
+			\item Erweiterte Einstellungen für erfahrene Benutzer
+			\end{itemize}
 			
 		\subsection{Nicht-Ziele}
+			Es ist kein Ziel die Software nach ihrer Fertigstellung proprietär zu vermarkten, sowie auf einer eigenen VPN-Lösungen aufzusetzen. Die Software wird ausschließlich auf Open-Source Lösungen zurückgreifen und in Ihrer Grundform kostenlos zur Verfügung stehen. Weiters ist es zwar möglich, dass die Software nach der Fertigstellung weiterhin durch das Projektteam betreut wird, allerdings wird garantiert kein Support durch das Projektteam für die Software zur Verfügung stehen und auch ist diese eventuelle Weiterführung nicht Teil des Projektes.
 			
 	\section{Festlegen der Hauptfunktionen}
+		\textbf{/HF10/ Verbinden mit einem LAN-Netzwerk bzw. LAN-Netzwerk erstellen}
 		
+		Jeder Benutzer kann sich mittels eines Benutzernamens erkennbar machen, Identifikation erfolgt jedoch mittels anderer Parameter (IP/ID). Das Programm selbst wird nur gestartet.
+		Kombination aus Netzwerkname und Passwort
+		
+		Anm.: Jedes LAN-Netzwerk identifiziert sich durch eine Kombination aus Namen des Netzwerks und zusätzlichem Passwort. Verwendet ein Benutzer hierbei eine nicht vorhandene Kombination, gleicht dies dem erstellen eines neuen Netzwerks. Das bedeutet der selbe LAN-Netzwerkname kann mehrmals für verschiedene Räume mit unterschiedlichen Passwörtern verwendet werden.
+		\textbf { /HF20/ Internetverbindung im VAN freigeben} 
+		
+		Ein Netzwerkteilnehmer2 kann seine Internetverbindung seinem LAN-Netzwerk zugänglich machen. Ein Teil oder der gesamte Internettraffic (falls nur ein Teilnehmer seine Internetverbindung freigegeben hat), den andere Teilnehmer produzieren, wird dann über diese Verbindung geroutet.
+		
+		\textbf {/HF30/ Mit dem Internet verbinden} 
+		
+		Der Benutzer kann festlegen ob er standardmäßig seine eigene Internetverbindung oder über einen Zugriffspunkt3 in seinem LAN-Netzwerk ins Internet gehen möchte.
+		
+		\textbf { /HF40/ Netzwerkteilnehmer anzeigen
+		}
+				
+		Umfasst die Anzeige von:
+		\begin{itemize}
+		
+	
+		\item Latenzzeit
+		\item Berechtigungen
+		\item IP - Adresse
+		\item Nickname
+		\item Zugriffspunkt (ja/nein)\\
+			\end{itemize}
+		
+		\textbf {/HF50/ Netzwerkteilnehmer ignorieren
+		}
+		
+		Ein Netzwerkteilnehmer kann andere Netzwerkteilnehmer von der Software ignorieren lassen. Dies bedeutet, dass die Kommunikation über das Netzwerk zwischen diesen Teilnehmern nicht länger möglich ist solange diese Sperre besteht.
+		
+		
+		
+		\textbf {/HF60/ Textnachrichten an Netzwerkteilnehmer senden}
+		
+		Netzwerkteilnehmer senden
+		
+		Auch eine Kommunikation über Textnachrichten unter den Teilnehmern wird möglich sein.
+		
+		 \textbf {/HF70/ Programmprofil hinzufügen/bearbeiten}
+		
+		Programmkompatibilität und Performanz sind einer der wichtigsten Ziele der Software. Um dies auch für Programme zu ermöglichen die spezielle Einstellungen erfordern, wird es die Möglichkeit geben Programmprofile zu erstellen und zu bearbeiten.
+	\section{Festlegung der Nebenfunktionen}
+	\textbf {/NF10/ Netzwerkteilnehmer für Internetverbindung nach Kriterien auswählen lassen}
+	
+	
+   	\textbf {/NF11/ Netzwerkteilnehmer für Internetverbindung manuell auswählen}
+	
+	Es soll möglich sein einen bestimmten Netzwerkteilnehmer, aus dem Pool der Teilnehmer die ihre Verbindung freigegeben haben auszuwählen, um über diesen und ausschließlich diesen Teilnehmer eine Internetverbindung aufzubauen.
+	
+	\textbf {/NF12/ Netzwerkteilnehmer für} Internetverbindung nach Algorithmus bestimmen
+	
+	Ebenfalls soll es möglich sein den optimalen Netzwerkteilnehmer automatisch nach einem bestimmten Kriterium (Latenzzeit, zur Verfügung stehende Bandbreite, etc.) auswählen zu lassen.
+	
+	\textbf {/NF20/ Ports weiterleiten}
+	
+	Ein Netzwerkteilnehmer der gleichzeitig einen Zugriffspunkt für andere Teilnehmer zur Verfügung stellt, kann spezielle Ports zu bestimmten Teilnehmern weiterleiten, sofern diese das bestätigen.
+	
+	\textbf {/NF30/ Gemeinsamen Ordner erstellen}
+	
+	Eine weitere Funktion ist das Erstellen eines Gemeinsamen Ordners, der innerhalb des Netzwerks freigegeben werden kann. Zusätzlich wird es möglich sein Berechtigungen für diesen Ordner festzulegen und die Benutzer auszuwählen, die auf ihn zugreifen dürfen.
+	
+	\textbf {/NF40/ Onion-Routing aktivieren}
+	
+	Für fortgeschrittene Benutzer wird es die Möglichkeit geben die Verbindung durch das Routen über mehrere verschiedene Netzwerkteilnehmer umzuleiten, um so eine gewisse Anonymität zu gewährleisten. Die Route wird automatisch definiert.
+	
+	\textbf {/NF41/ Route nach Kriterien auswählen lassen}
+	
+	Zusätzlich ist es möglich die optimale Route, mit Berücksichtigung gewisser Kriterien (Latenzzeit,Bandbreite, Sicherheit etc.), ermitteln zu lassen
+	
+	\textbf {/NF50/ Erweiterte Einstellungen für erfahrene Benutzer}
+	
+	Hier werden Einstellungen zu finden sein die besonders für erfahrene Benutzer interessant sein werden, z.B. Internetfreigabe, Portweiterleitung, Onion-Routing, etc.
+	
 	\section{Festlegen der Hauptdaten}
+	\textbf {/HD10/ Nickname}
+	
+	Gespeicherter Nickname und Identität zur Authentifikation
+	
+	\textbf {/HD20/ Gespeicherte VANs}
+	
+	VANs die der Benutzer für die spätere Verwendung abgespeichert hat
+	
+	\textbf {/HD30/ Einstellungen}
+	
+	Vorgenommene Einstellungen in der Software
+	
+	\textbf {/HD40/ Programmprofile}
+	
+	Profile für Programmkompatibilität
+	
 		
 	\section{Festlegen der Hauptleistungen}
+	   \textbf{/LL10/ Optimierter Datenverkehr durch Peer-to-Peer}
 		
+		Da hier keine Server-Client Architektur verwendet wird, ist auch der Datenverkehr, der über einen einzigen Netzwerkteilnehmer geführt wird, deutlich geringer.
+		
+		\textbf {/LL20/ Hohe Erweiterbarkeit der Software durch vorausschauend geplantes Programmdesign}
+		
+		\textbf {/LL30/ Hohe Kompatibilität zu verschiedensten Programmen}
+		
+		Bei der Entwicklung der Software wird besonders darauf geachtet, dass sie mit verschiedensten Programmen kompatibel ist. Da dies natürlich nicht immer vom Programm selbst gewährleistet werden kann, wird es hierfür einen Profilmanager geben. Dieser ist speziell dafür gedacht Programmprofile zu Programmen zu erstellen die eine spezielle Konfiguration des Netzwerks oder des Netzwerkteilnehmers erfordern.
+		
+		\textbf {/LL40/ Hohe Performanz}
+		
+		Hiermit ist sowohl Performanz innerhalb des Programms, als auch im Netzwerk gemeint.
 	\section{Festlegen der wichtigsten Aspekte der Benutzerschnittstelle}
 		
 		Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden und einige Eingewöhnungszeit benötigen. Deshalb wird die Benutzerschnittstelle, aber auch das Programm selbst, besonders intuitiv und einfach verwendbar sein und die wichtigsten Funktionen möglichst einfach zu erreichen sein. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann bereits nach dem Start der Software verwendet werden.
 		
 	\section{Festlegen der wichtigsten Qualit\"atsmerkmale}
-		
+		\begin{itemize}
+			\item {\LARGE\textbf{Sicherheit}}\\
+			Das Produkt wird hauptsächlich auf den Einsatz mit vielen Benutzer zugeschnitten. Um in dieser Gemeinschaft dem Abhören von übertragenen Daten vorzubeugen, wird besonders auf gute Sicherheitslösungen und Verschlüsselungsmechanismen viel Wert gelegt.
+			\item {\LARGE\textbf{Benutzbarkeit}}\\
+			Bei der Entwicklung wird äußerst viel Wert auf eine intuitive und einfache GUI gelegt, die aber sowohl was die Performanz, als auch das Design angeht schöne Ergebnisse liefert und damit in erster Linie dem Benutzer zugute kommt.
+			\item {\LARGE\textbf{Effizienz}}\\
+			Da bei unserem Programm auch mit vielen Benutzer gerechnet wird und diese auch viele Daten verschicken, muss unser Programm auch imstande sein diese Netzwerklast zu reduzieren und zu managen. Weiters ist es notwendig, dass die Software auch selbst schnell und effizient arbeitet. Daher wird bereits bei der Code- und GUI-Entwicklung auf möglichst geringe Ladezeiten geachtet und auf schnelle Befehlsdurchführung wertgelegt.
+			\item {\LARGE\textbf{Erweiterbarkeit}}\\
+			Wie bereits bei den Hauptleistungen erwähnt, ist vorgesehen das Programm so zu schreiben, dass zukünftige Erweiterungen der Software leicht möglich sind.
+			\item {\LARGE\textbf{Übertragbarkeit}}	\\
+			%Bitte zu überarbeiten da wie jetzt C++ statt Java benutzen
+			\end{itemize}
 \chapter{Durchf\"uhrbarkeitsuntersuchung}
-
-	\section{Vorhandene Technologien}
-		
-		\subsection{VPN 1}
-		
-		\subsection{VPN 2}
-		
-		\subsection{Fazit}
 	
 	\section{Pr\"ufen alternativer L\"osungsvorschl\"age}
 	
@@ -104,13 +235,12 @@ Aus dem Projekt soll eine Software hervorgehen, die auf einer bestehenden Lösun
 		
 		
 		
-		\subsection{Entwicklungsumgebung}
-		
-		\subsection{Gesamtfazit}
 			
 	\section{Pr\"ufen der technischen Durchf\"uhrbarkeit}
 		
 		\subsection{Softwaretechnische Durchf\"uhrbarkeit}
+			Socks: Ermöglicht die leichte port weiterleitung falls es mit der einbindung von ssl-clienst nicht richtig Funktionniert
+			SSL: Ermöglicht eine Sichere Verbindung mit den andere Nodes.
 			
 		\subsection{Hardwaretechnische Durchf\"uhrbarkeit}
 			
