@@ -208,20 +208,27 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 		Hiermit ist sowohl Performanz innerhalb des Programms, als auch im Netzwerk gemeint.
 	\section{Festlegen der wichtigsten Aspekte der Benutzerschnittstelle}
 		
-		Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden und einige Eingewöhnungszeit benötigen. Deshalb wird die Benutzerschnittstelle, aber auch das Programm selbst, besonders intuitiv und einfach verwendbar sein und die wichtigsten Funktionen möglichst einfach zu erreichen sein. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann bereits nach dem Start der Software verwendet werden.
+	Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche, in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden. Deshalb wird das Programm besonders intuitiv und simpel verwendbar und die wichtigsten Funktionen möglichst einfach zu erreichen sein. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann direkt nach dem Start  verwendet werden.
+	
+	
 		
 	\section{Festlegen der wichtigsten Qualit\"atsmerkmale}
 		\begin{itemize}
 			\item {\LARGE\textbf{Sicherheit}}\\
-			Das Produkt wird hauptsächlich auf den Einsatz mit vielen Benutzer zugeschnitten. Um in dieser Gemeinschaft dem Abhören von übertragenen Daten vorzubeugen, wird besonders auf gute Sicherheitslösungen und Verschlüsselungsmechanismen viel Wert gelegt.
+		Das Produkt wird stark auf den Einsatz durch viele Benutzer zugeschnitten. Um in dieser Gemeinschaft dem Abhören von Außenstehenden über übertragene Daten vorzubeugen, wird besonders auf gute Sicherheitslösungen und Verschlüsselungsmechanismen viel Wert gelegt. 
 			\item {\LARGE\textbf{Benutzbarkeit}}\\
-			Bei der Entwicklung wird äußerst viel Wert auf eine intuitive und einfache GUI gelegt, die aber sowohl was die Performanz, als auch das Design angeht schöne Ergebnisse liefert und damit in erster Linie dem Benutzer zugute kommt.
+			Bei der Entwicklung wird äußerst viel Wert auf eine intuitive und einfache GUI gelegt, die aber sowohl was die Performanz, als auch das Design angeht schöne Ergebnisse liefert und damit in erster Linie dem Benutzer zugute kommt. 
+			
 			\item {\LARGE\textbf{Effizienz}}\\
-			Da bei unserem Programm auch mit vielen Benutzer gerechnet wird und diese auch viele Daten verschicken, muss unser Programm auch imstande sein diese Netzwerklast zu reduzieren und zu managen. Weiters ist es notwendig, dass die Software auch selbst schnell und effizient arbeitet. Daher wird bereits bei der Code- und GUI-Entwicklung auf möglichst geringe Ladezeiten geachtet und auf schnelle Befehlsdurchführung wertgelegt.
+		Da bei unserem Programm  mit vielen Benutzer gerechnet wird und diese  viele Daten verschicken, muss unser Programm  imstande sein diese Netzwerklast handeln. Weiters ist es notwendig, dass die Software selbst schnell und effizient arbeitet. Daher wird bereits bei der Code- und GUI-Entwicklung auf schnelle Befehlsdurchführung wertgelegt.
+		
+		
 			\item {\LARGE\textbf{Erweiterbarkeit}}\\
-			Wie bereits bei den Hauptleistungen erwähnt, ist vorgesehen das Programm so zu schreiben, dass zukünftige Erweiterungen der Software leicht möglich sind.
+		Wie bereits bei den Hauptleistungen erwähnt, ist vorgesehen das Programm so zu schreiben, dass zukünftige Erweiterungen der Software leicht möglich sind. Durch Beachtung der Gängigen Programmierregeln werden wir es ermöglichen das Programm einfach erweiterbar 
+		
 			\item {\LARGE\textbf{Übertragbarkeit}}	\\
-			%Bitte zu überarbeiten da wie jetzt C++ statt Java benutzen
+			Da wir uns entscheiden haben das Programm für Windows zu optimieren, legen wir in weiterer Hinsicht weniger Wert auf die Übertragbarkeit der Software.
+			
 			\end{itemize}
 \chapter{Durchf\"uhrbarkeitsuntersuchung}
 	
@@ -229,7 +236,9 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 	
 		\subsection{Programmiersprachen}
 		
-		Da dieses Projekt auf einem bereits bestehenden Programm aufsetzt ist die Programmiersprache bis zu einem gewissen Grad vorgegeben. Es besteht zwar durchaus die Möglichkeit auch andere Sprachen zu verwenden, das verursacht jedoch ungerechtfertigten Aufwand der keine ausreichenden Vorteile bieten kann, weshalb dieses Projekt in C++ durchgeführt wird.
+	Da dieses Projekt auf einem bereits bestehenden Programm aufsetzt ist die Programmiersprache zu einem gewissen Grad vorgegeben. Es besteht zwar durchaus die Möglichkeit auch andere Sprachen zu verwenden, das verursacht jedoch Aufwand der keine ausreichenden Vorteile bieten kann-
+	Dieses Projekt wird daher in C++ umgesetzt.
+	
 		
 		
 		
@@ -237,8 +246,9 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 	\section{Pr\"ufen der technischen Durchf\"uhrbarkeit}
 		
 		\subsection{Softwaretechnische Durchf\"uhrbarkeit}
-			Socks: Ermöglicht die leichte port weiterleitung falls es mit der einbindung von ssl-clienst nicht richtig Funktionniert
-			SSL: Ermöglicht eine Sichere Verbindung mit den andere Nodes.
+		Socks: Ermöglicht die leichte port weiterleitung falls es mit der Einbindung von SSL-clienst nicht richtig Funktionniert
+		SSL: Ermöglicht eine sichere Verbindung mit den anderen Nodes.
+		
 			
 		\subsection{Hardwaretechnische Durchf\"uhrbarkeit}
 			
@@ -248,29 +258,32 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 			
 		\subsection{Verfügbarkeit von Entwicklungs- und Zielmaschinen}
 			
-		Die entwickelte Software wird auf normalen PCs entwickelt und ist auch ausschließlich für jene gedacht. Deshalb ist die Verfügbarkeit von Entwicklungs- und Zielmaschinen, für die Fertigstellung und den Einsatz der Software, irrelevant.
+	Die Software wird auf normalen PCs entwickelt und ist auch ausschließlich für jene gedacht. Deshalb ist die Verfügbarkeit von Entwicklungs- und Zielmaschinen, für die Fertigstellung und den Einsatz der Software, irrelevant da zu jedem Zeitpunkt des Projektes mindestens zwei PC uns zur Verfügung stehen werden.
 			
 	\section{Pr\"ufen der personellen Durchf\"uhrbarkeit}
 		
 		\subsection{Qualifikation der Fachkr\"afte}
 			
 		
-		Das gesamte Projektteam kann bereits mit einiger netzwerktechnischen Erfahrung aufwarten und hat sich ebenfalls bereits mit VPN-Software jeglicher Art in der Vergangenheit beschäftigt. Darüber hinaus verfügt das Team über ein hohes Maß an softwaretechnischem Wissen und hat bereits Erfahrung mit einigen Programmiersprachen. Da die Software zum größten Teil, wenn nicht sogar zur Gänze, in Java geschrieben wird und das Team speziell mit dieser Programmiersprache bereits jahrelange Erfahrung mitbringt, sieht es sich imstande das Projekt zu einem erfolgreichen und zufriedenstellenden Ende führen.
+	Das gesamte Projektteam kann bereits mit einiger netzwerktechnischen Erfahrung aufwarten und hat sich ebenfalls bereits mit VPN-Software verschiedenster Art in der Vergangenheit beschäftigt. Darüber hinaus verfügt das Team über ein hohes Maß an softwaretechnischem Wissen und hat bereits Erfahrung mit einigen Programmiersprachen. Da die Software zum größten Teil, wenn nicht sogar zur Gänze, in C++ geschrieben wird und das Team schon einige Erfahrung mit dieser Programmiersprache gemacht hat, sieht es sich imstande das Projekt zu einem erfolgreichen und zufriedenstellenden Ende führen.
+	
 		
 		\subsection{Zusammenarbeit der Teammitglieder}
 		
 		
-		Da die Teammitglieder schon öfters in dieser Gruppenzusammensetzung gearbeitet haben und es sich daher als eingespieltes Team bezeichnen kann, gehen wir davon aus, dass dies auch in diesem Projekt zu einem positiven Abschluss beiträgt.
-		
-		Weiters wurden bereits im Vorfeld möglichst effiziente Organisationsstrukturen und Kommunikationsplattformen geschaffen, welche der Effizienz der Projektarbeit eine Steigerung verschaffen sollten.
+	Da die Teammitglieder schon öfters in dieser Gruppenzusammensetzung gearbeitet haben und es sich daher als eingespieltes Team bezeichnen kann, geht das Team davon aus, dass dies auch in diesem Projekt zu einem positiven Abschluss beiträgt.
+	
+	Weiters wurden bereits im Vorfeld möglichst effiziente Organisationsstrukturen und Kommunikationsplattformen geschaffen, welche der Effizienz der Projektarbeit eine Steigerung verschaffen sollten.
+	
 			
 	\section{Risikoanalyse}
 		
 		\subsection{Personelle Risiken}
-		Da dieses Projekt von einem Team, bestehend aus 4 Mitgliedern bearbeitet wird und der schlimmste Fall, das mehrere Teammitglieder über einen größeren Zeitraum gleichzeitig ausfallen, eher eine große Ausnahme darstellt, sehen wir keine größeren Personellen Risiken an diesem Projekt.
+	Da dieses Projekt von einem Team, bestehend aus 4 Mitgliedern, bearbeitet wird und der schlimmste Fall, das mehrere Teammitglieder über einen größeren Zeitraum gleichzeitig ausfallen, eher eine  Ausnahme darstellt, sehen wir keine größeren Personellen Risiken an diesem Projekt.
+	
 		
 		\subsection{Technische Risiken}
-		Neben technischen Risiken wie zu hoch gesteckte Ziele und zu geringes technisches Know-How, welche als eher gering eingestuft werden können, ist das Risiko, dass den verwendeten VPN-Treiber betrifft, umso höher. Auf diesen hat das Projektteam in Funktionsweise und -umfang kaum bis keinen Einfluss und muss sich voll und ganz auf ihn verlassen können. Mögliche Risiken die es beim verwendeten VPN-Treiber zu berücksichtigen gilt, sind fehlender Funktionsumfang, nicht vorhergesehene Funktionsweisen oder zu hoher Aufwand um bestimmte Projektziele, mit dem Treiber als Grundlage, zu erreichen. Deshalb ist die Auswahl eines geeigneten VPN-Treibers besonders essentiell, um das Risiko dahingehend möglichst zu minimieren. 
+	Neben technischen Risiken wie zu hoch gesteckte Ziele und zu geringes technisches Know-How, welche als eher gering eingestuft werden können, ist das Risiko, bezüglich des  verwendeten VPN-Treiberst, umso höher. Auf diesen hat das Projektteam in Funktionsweise und -umfang kaum bis keinen Einfluss und muss sich voll und ganz auf ihn verlassen können. Mögliche Risiken die es beim verwendeten VPN-Treiber zu berücksichtigen gilt, sind fehlender Funktionsumfang, nicht vorhergesehene Funktionsweisen oder zu hoher Aufwand um bestimmte Projektziele, mit dem Treiber als Grundlage, zu erreichen. Deshalb ist die Auswahl eines geeigneten VPN-Treibers besonders essenziell, um das Risiko dahingehend möglichst zu minimieren. 
 		
 	\section{Pr\"ufen der \"Okonomischen Durchf\"uhrbarkeit}
 		
