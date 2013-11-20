@@ -1,0 +1,139 @@
+\documentclass[a4paper,12pt]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{tabu}
+\usepackage{graphicx}
+
+
+
+\begin{document}
+
+
+\author{Dominik Backhausen \and Daniel Dimitrijevic \and Alexander Rieppel \and Thomas Traxler}
+\subject{Pflichtenheft}
+\title{LAN Yourself}
+\date{10.09.2013}
+\maketitle
+\tableofcontents
+
+	
+\chapter{Zielbestimmung}
+	\begin{itemize}
+	\item Im Rahmen des Projektes wird eine Software entwickelt, die den Aufbau eines virtuellen lokalen Netzwerkes gewährleistet.
+	\item Die Besonderheit dieses Projektes ist, dass dieses VAN nicht auf einem zentralen Server, sondern in VAN-Räumen, mit Hilfe von Peer-to-Peer realisiert und verwaltet wird.
+	\item Dabei wird speziell auf gute Kompatibilität und Performance geachtet.
+	\item Ein intuitives und dezentes GUI wird zusätzlich die Benutzung der Software erleichtern.
+	\item Zusätzlich wird die einfache Verwendbarkeit sichergestellt sein.
+	\end{itemize}
+	
+	\subsection{Kann-Ziele}
+	
+	\begin{itemize}
+	\item Internetverbindung im VAN freigeben
+	\item Zugriffspunkt für die Internetverbindung in einem VAN nach bestimmten Kriterien aussuchen lassen, wobei dies entweder manuell oder über einen Algorithmus erfolgen kann
+	\item Ports am Internetzugriffspunkt zu bestimmten Netzwerkteilnehmern weiterleiten
+	\item Gemeinsame Ordner erstellen und bestimmten Netzwerkteilnehmern freigeben
+	\item Onion-Routing (Pfadauswahl auch durch Kriterien möglich)
+	\item Erweiterte Einstellungen für erfahrene Benutzer
+	
+	\end{itemize}
+	
+	\subsection{Nichtziele}
+	
+	\begin{itemize}
+	\item Vermarktung der Software
+	\item Entwicklung einer neuen VPN-Technologie
+	\end{itemize}
+	
+	
+\chapter{Produkteinsatz}
+	
+	\section{Anwendungsbereiche}
+	 Die Software ist in erster Linie für Firmen gedacht die ein schnelles und einfaches VPN-Netzwerk benötigen. Dabei ist wichtig, dass verschiedenste Varianten dieses Szenarios denkbar sind, wie z.B. Mitarbeiter die international, auf allen Kontinenten verteilt, miteinander sicher kommunizieren müssen und gleichzeitig, im selben Netzwerk, Zugriff auf die internen Dienste der Firma benötigen (Server, Datenbank, etc.). Da die Software aber auch dafür ausgelegt ist, mit möglichst vielen verschiedenen Programmen zu funktionieren, sind die Anwendungsbereiche vielfältig. Deshalb ist sie nicht nur für Firmen, sondern auch für Privatpersonen interessant die ein VPN-Netzwerk einrichten wollen, aber dabei möglichst flexibel, benutzerfreundlich und sich die komplizierte Einrichtung eines VPN-Servers ersparen möchten. 	
+		
+\chapter{Produktfunktionen}
+	
+	\textbf{/LF10/ Verbinden mit einem VAN bzw. VAN erstellen}
+			
+			Jeder Benutzer kann sich mittels eines Benutzernamens erkennbar machen, Identifikation erfolgt jedoch mittels anderer Parameter (IP/ID). Das Programm selbst wird nur gestartet.
+			
+			Anm.: Jedes VAN identifiziert sich durch eine Kombination aus Namen des Netzwerks und zusätzlichem Passwort. Verwendet ein Benutzer hierbei eine nicht vorhandene Kombination, gleicht dies dem Erstellen eines neuen Netzwerks. 
+			
+			\textbf { /LF20/ Netzwerkteilnehmer anzeigen
+			}
+					
+			Umfasst die Anzeige von:
+			\begin{itemize}
+			
+		
+			\item Latenzzeit
+			\item Berechtigungen
+			\item IP-Adresse
+			\item Nickname
+			\item Zugriffspunkt (ja/nein)\\
+				\end{itemize}
+			
+			\textbf {/LF30/ Textnachrichten an Netzwerkteilnehmer senden}
+			
+			
+			Auch eine Kommunikation über Textnachrichten unter den Teilnehmern wird möglich sein.
+			
+			 \textbf {/LF40/ Programmprofil hinzufügen/bearbeiten}
+			
+			Programmkompatibilität und Performanz sind einer der wichtigsten Ziele der Software. Um dies auch für Programme zu ermöglichen die spezielle Einstellungen erfordern, wird es die Möglichkeit geben Programmprofile zu erstellen und zu bearbeiten.
+			
+\chapter{Produktdaten}
+	
+	\textbf{/HD10/ Nickname}	
+	
+	Gespeicherter Nickname und Identität zur Authentifikation
+	
+	\textbf{/HD20/ Gespeicherte LAN-Netzwerke}
+	
+	LAN-Netzwerke die der Benutzer für die spätere Verwendung abgespeichert hat
+	
+	\textbf{/HD30/ Einstellungen}
+	
+	Vorgenommene Einstellungen in der Software
+	
+	\textbf{/HD40/ Programmprofile}
+	
+	Profile für Programmkompatibilität
+
+\chapter{Produktleistungen}
+\textbf{/LL10/ Optimierter Datenverkehr durch Peer-to-Peer}
+	
+	Da hier keine Server-Client Architektur verwendet wird, ist auch der Datenverkehr, der über einen einzigen Netzwerkteilnehmer geführt wird, deutlich geringer.
+	
+\textbf{/LL20/ Hohe Erweiterbarkeit der Software durch vorausschauend geplantes Programmdesign}
+	
+\textbf{/LL30/ Hohe Kompatibilität zu verschiedensten Programmen}
+	
+	Bei der Entwicklung der Software wird besonders darauf geachtet, dass sie mit verschiedensten Programmen kompatibel ist. Da dies natürlich nicht immer vom Programm selbst gewährleistet werden kann, wird es hierfür einen Profilmanager geben. Dieser ist speziell dafür gedacht Programmprofile zu Programmen zu erstellen die eine spezielle Konfiguration des Netzwerks oder des Netzwerkteilnehmers erfordern.
+	
+\textbf{/LL40/ Hohe Performanz}
+	
+	Hiermit ist sowohl Performanz innerhalb des Programms, als auch im Netzwerk gemeint.
+	
+	
+	
+	
+\chapter{Benutzerschnittstelle}
+	Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden und einige Eingewöhnungszeit benötigen. Deshalb wird die Benutzerschnittstelle, aber auch das Programm selbst, besonders intuitiv und einfach verwendbar sein um die wichtigsten Funktionen möglichst einfach erreichen zu können. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann bereits nach dem Start der Software verwendet werden.
+	
+	
+	
+\chapter{Qualitätsanforderungen}
+Die Software muss sehr einfach zu bedienen sein, was ein intuitives GUI voraussetzt. Abgesehen davon soll es möglich sein das Programm zu starten und nichts weiter einstellen zu müssen um das Programm zu verwenden. Allerdings ist es ebenfalls ein Anliegen möglichst viele Funktionen zur Verfügung zu stellen die je nach Bedarf eingestellt werden können. Von der Software selbst sollen möglichst wenige Daten ausgehen, damit eine Verbindung mit ausreichender Performanz jederzeit gewährleistet ist.
+
+
+	
+
+
+
+
+	
+	
+\end{document}
