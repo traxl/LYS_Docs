@@ -1,0 +1,243 @@
+\documentclass[a4paper,12pt]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{tabu}
+\usepackage{graphicx}
+
+
+
+\begin{document}
+
+
+\author{Dominik Backhausen \and Daniel Dimitrijevic \and Alexander Rieppel \and Thomas Traxler}
+\subject{Pflichtenheft}
+\title{LAN Yourself}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\chapter{Projekt-Team}
+	\begin{itemize}
+	\item Dominik Backhausen\\
+	Fähigkeiten:Java, Html, C/C++, SQL
+	\item Daniel Dimitrijevic\\
+	Fähigkeiten: Java, Html,C/C++, SQL
+	\item Alexander Rieppel\\
+		Fähigkeiten:Java, Html, C/C++, SQL    
+	\item Thomas Traxler\\
+	Fähigkeiten:Java, Html, C/C++, SQL
+	\end{itemize}
+	
+	
+\chapter{Zielbestimmung}
+	\begin{itemize}
+	\item Peer-to-Peer Prinzip
+	\item Erstellung von virtuellen VAN-Netzwerken
+	\item intuitives GUI-Design
+	\item Profilmanager für verschiedene Programme und zugehörige Programmprofile
+	\item Einstellungsmenü für erweiterte Einstellungen
+	\item Netzwerkteilnehmerliste
+<<<<<<< HEAD
+	\item Weiterleitung der Internetverbindung eines Teilnehmers in sein VAN
+	\item Einstellung ob die Internetverbindung des VAN-Netzwerks oder die eigene verwendet werden soll
+=======
+>>>>>>> LYS_Docs/MachbarkeitAlex
+	\end{itemize}
+	
+	\section{Zulässige Erweiterungen}
+	
+	\begin{itemize}
+<<<<<<< HEAD
+	\item Zugriffspunkt für die Internetverbindung in einem VAN-Netzwerk nach bestimmten Kriterien aussuchen lassen, wobei dies entweder manuell oder über einen Algorithmus stattfinden wird.
+=======
+	\item Weiterleitung der Internetverbindung eines Teilnehmers in sein LAN-Netzwerk
+	\item Einstellung ob die Internetverbindung des LAN-Netzwerks oder die eigene verwendet werden soll
+	\item Zugriffspunkt für die Internetverbindung in einem LAN-Netzwerk nach bestimmten Kriterien aussuchen lassen, wobei dies entweder manuell oder über einen Algorithmus erfordern kann
+>>>>>>> LYS_Docs/MachbarkeitAlex
+	\item Ports am Internetzugriffspunkt zu bestimmten Netzwerkteilnehmern weiterleiten
+	\item Gemeinsame Ordner erstellen und bestimmten Netzwerkteilnehmern freigeben
+	\item Onion-Routing (Pfadauswahl auch durch Kriterien möglich)
+	\item Erweiterte Einstellungen für erfahrene Benutzer
+	
+	\end{itemize}
+	
+	\section{Unzulässige Erweiterungen / Nichtziele}
+	
+	\begin{itemize}
+	\item Es ist kein Ziel die Software nach ihrer Fertigstellung zu vermarkten
+	\item Es ist kein Ziel auf einer eigenen VPN-Lösung aufzusetzen
+	
+	\end{itemize}
+	
+	
+\chapter{Produkteinsatz}
+	
+	\section{Anwendungsbereiche}
+<<<<<<< HEAD
+	 Die Software ist in erster Linie für Firmen gedacht die ein schnelles und einfaches VPN-Netzwerk benötigen. Dabei ist wichtig, dass verschiedenste Vari\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{./Unbenannt}
+\caption{}
+\label{fig:Unbenannt}
+\end{figure}
+anten dieses Szenarios denkbar sind, wie z.B. Mitarbeiter die international, auf allen Kontinenten verteilt, miteinander sicher kommunizieren müssen und gleichzeitig, im selben Netzwerk, Zugriff auf die internen Dienste der Firma benötigen (Server, Datenbank, etc.). Da aber die Software auch dafür ausgelegt ist, mit möglichst vielen verschiedenen Programmen zu funktionieren, sind die Anwendungsbereiche vielfältig und können nicht eindeutig definiert werden. Deshalb ist sie nicht nur für Firmen, sondern auch für Privatpersonen interessant die ein VPN-Netzwerk einrichten wollen, aber dabei möglichst flexibel, benutzerfreundlich und sich die komplizierte Einrichtung eines VPN-Servers ersparen möchten. 
+=======
+	 Die Software ist in erster Linie für Firmen gedacht die ein schnelles und einfaches VPN-Netzwerk benötigen. Dabei ist wichtig, dass verschiedenste Varianten dieses Szenarios denkbar sind, wie z.B. Mitarbeiter die international, auf allen Kontinenten verteilt, miteinander sicher kommunizieren müssen und gleichzeitig, im selben Netzwerk, Zugriff auf die internen Dienste der Firma benötigen (Server, Datenbank, etc.). Da die Software aber auch dafür ausgelegt ist, mit möglichst vielen verschiedenen Programmen zu funktionieren, sind die Anwendungsbereiche vielfältig. Deshalb ist sie nicht nur für Firmen, sondern auch für Privatpersonen interessant die ein VPN-Netzwerk einrichten wollen, aber dabei möglichst flexibel, benutzerfreundlich und sich die komplizierte Einrichtung eines VPN-Servers ersparen möchten. 
+>>>>>>> LYS_Docs/MachbarkeitAlex
+	 	
+		
+		
+		
+	\section{Zielgruppe}
+	
+	Generell kann man die Zielgruppe auf folgende großen Gruppen einschränken:
+	\begin{itemize}
+	\item Mitarbeiter die sich per VPN mit dem Intranet der Firma verbinden wollen um auf interne Server zuzugreifen und gleichzeitig möglichst sicher und international miteinander verbunden sein wollen.
+	\item Private Personen mit dem Wunsch eines VPN-Netzwerks
+	\end{itemize}
+		
+	\section{Betriebsbedingungen}
+	Die einzige Anforderung die unser Produkt haben wird, ist ein PC mit einer funktionierenden Internetverbindung und einer installierten Version der verwendeten VPN-Software. Diese wird aber mit dem Programm mitgeliefert. Darüber hinaus wird unser Programm zunächst nur für Windows ausgelegt sein und daher keine Garantie für die Funktionalität auf anderen Systemen übernommen.
+		
+\chapter{Produktumgebung}
+	
+	\section{Software}
+		
+		Unsere Software benötigt die am 11. November 2013 aktuelle Version der VPN Basis, welche mit unserem Produkt gleich mit ausgeliefert wird. Des weiteren wird die Funktionalität vorerst nur unter Windows 7 garantiert, eine Erweiterung der Kompatibilität unserer Software in diesem Punkt ist angedacht wird jedoch kein Teil dieses Projekts werden.
+		
+	\section{Hardware}
+		
+		Das Produkt wir annähernd die selben Anforderungen an die Hardware haben wie die VPN Basis, dies entspricht annähernd jeden handelsüblichen, Windows-kompatiblen Computer.	
+		
+	\section{Produktschnittstellen}
+		
+<<<<<<< HEAD
+		Die Hauptschnittstelle des Produkts ist die VPN Basis, da diese für jegliche Kommunikation verwendet wird. 
+=======
+	Fehlen??
+	%Bitte hier ebenfalls noch die Funktionen anpassen und Funktionen die mit der Weiterleitung	der Internetverbindung zu tun haben in die Kann Ziele verschieben
+>>>>>>> LYS_Docs/MachbarkeitAlex
+		
+\chapter{Produktfunktionen}
+	\tabulinesep = 4pt
+	\begin{tabu}  {|[1.5pt]X[2.5,c] |[0pt] X[5,c] |[1.5pt]X|[1.5pt]X[1.3,c]|[1.5pt]X[1.7,c]|[1.5pt]}
+	
+		\tabucline[1.5pt]{-}
+		\rowcolor{blue!50}Funktion && Nutzen & Aufwand&\\\tabucline[1.5pt]{-}
+		&& 	& &\\
+		\cellcolor{blue!50}Name &\cellcolor{blue!50}  &&&\\
+		Art & Anwendungsfall&&&\\
+		\cellcolor{blue!50}Beschreibung & \cellcolor{blue!50}&&&\\
+		Auslöser& &&&\\
+		\cellcolor{blue!50}Ergebnis&\cellcolor{blue!50}&&&\\
+		Akteure& &&&\\
+		\cellcolor{blue!50}Eingehende Informationen&\cellcolor{blue!50} &&&\\
+		Vorbedingungen& &&&\\
+		\cellcolor{blue!50}Nachbedingungen& \cellcolor{blue!50}&&&\\\tabucline[1.5pt]{-}
+	\end{tabu}
+	
+\chapter{Produktdaten}
+	
+	\textbf {/HD10/ Nickname}
+	
+	Gespeicherter Nickname und Identität zur Authentifikation\\
+	\textbf {/HD20/ Gespeicherte VANs}
+	
+	VANs die der Benutzer für die spätere Verwendung abgespeichert hat\\
+	\textbf {/HD30/ Einstellungen}
+	
+	Vorgenommene Einstellungen in der Software\\
+	\textbf {/HD40/ Programmprofile}
+	
+	Profile für Programmkompatibilität
+
+\chapter{Produktleistungen}
+\textbf{/LL10/ Optimierter Datenverkehr durch Peer-to-Peer}
+	
+	Da hier keine Server-Client Architektur verwendet wird, ist auch der Datenverkehr, der über einen einzigen Netzwerkteilnehmer geführt wird, deutlich geringer.
+	
+\textbf{/LL20/ Hohe Erweiterbarkeit der Software durch vorausschauend geplantes Programmdesign}
+	
+\textbf{/LL30/ Hohe Kompatibilität zu verschiedensten Programmen}
+	
+	Bei der Entwicklung der Software wird besonders darauf geachtet, dass sie mit verschiedensten Programmen kompatibel ist. Da dies natürlich nicht immer vom Programm selbst gewährleistet werden kann, wird es hierfür einen Profilmanager geben. Dieser ist speziell dafür gedacht Programmprofile zu Programmen zu erstellen die eine spezielle Konfiguration des Netzwerks oder des Netzwerkteilnehmers erfordern.
+	
+\textbf{/LL40/ Hohe Performanz}
+	
+	Hiermit ist sowohl Performanz innerhalb des Programms, als auch im Netzwerk gemeint.
+	
+	
+	
+	
+\chapter{Benutzerschnittstelle}
+	Bestehende Programme haben oft eine unzureichend intuitive Benutzeroberfläche in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden und dadurch es einiger Eingewöhnungszeit benötigen. Deshalb wird die Benutzerschnittstelle, besonders intuitiv und einfach gestaltet damit der Benuzter die wichtigsten Funktionen möglichst einfach und schnell erreichen kann. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann direkt nach dem Start verwendet werden.
+	
+	
+\chapter{Qualitätsbestimmungen}
+\begin{itemize}
+	\item {\LARGE\textbf{Sicherheit}}\\
+	Das Produkt wird hauptsächlich auf den Einsatz mit vielen Benutzer zugeschnitten. Um in dieser Gemeinschaft dem Abhören von übertragenen Daten vorzubeugen, wird besonders auf gute Sicherheitslösungen und Verschlüsselungsmechanismen viel Wert gelegt.
+	\item {\LARGE\textbf{Benutzbarkeit}}\\
+	Bei der Entwicklung wird äußerst viel Wert auf eine intuitive und einfache GUI gelegt, die aber sowohl was die Performanz, als auch das Design angeht schöne Ergebnisse liefert und damit in erster Linie dem Benutzer zugute kommt.
+	\item {\LARGE\textbf{Effizienz}}\\
+	Da bei unserem Programm auch mit vielen Benutzer gerechnet wird und diese auch viele Daten verschicken, muss unser Programm auch imstande sein diese Netzwerklast zu reduzieren und zu managen. Weiters ist es notwendig, dass die Software auch selbst schnell und effizient arbeitet. Daher wird bereits bei der Code- und GUI-Entwicklung auf möglichst geringe Ladezeiten geachtet und auf schnelle Befehlsdurchführung wertgelegt.
+	\item {\LARGE\textbf{Erweiterbarkeit}}\\
+	Wie bereits bei den Hauptleistungen erwähnt, ist vorgesehen das Programm so zu schreiben, dass zukünftige Erweiterungen der Software leicht möglich sind.
+	\item {\LARGE\textbf{Übertragbarkeit}}	\\
+	Da wir uns entscheiden haben das Programm für Windows zu optimieren, legen wir in weiterer Hinsicht weniger Wert auf die Übertragbarkeit der Software.
+	\end{itemize}
+\chapter{Globale Testfälle}
+	%TODO Relative Pfade.. grafiken in den Ordner!!
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.7\linewidth]{C:/Users/Daniel/Desktop/Aufgaben/5ahitt/VPN_Internet_freigeben}
+%		\caption{}
+%		\label{fig:VPN_Internet_freigeben}
+%	\end{figure}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.7\linewidth]{C:/Users/Daniel/Desktop/Aufgaben/5ahitt/VPN_Profilemanager}
+%		\caption{}
+%		\label{fig:VPN_Profilemanager}
+%	\end{figure}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.7\linewidth]{C:/Users/Daniel/Desktop/Aufgaben/5ahitt/VPN_Raum_Beantragen}
+%		\caption{}
+%		\label{fig:VPN_Raum_Beantragen}
+%	\end{figure}
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.7\linewidth]{C:/Users/Daniel/Desktop/Aufgaben/5ahitt/VPN_Raum_Beitreten}
+%		\caption{}
+%		\label{fig:VPN_Raum_Beitreten}
+%	\end{figure}
+
+	
+\chapter{Entwicklungsumgebung}
+	
+	\section{Software}
+		Zur Entwicklung der Software wird jeder seine Entwicklungsumgebung benutzen dürfen. Falls es zu Fehlern zwischen denn Entwicklungsumgebungen kommt werden wir uns auf eine einigen und nur mit dieser weiter arbeiten. 
+		
+		Visual Studio 2013: Wird als Hauptentwicklungsumgebung benutzt werden weil es das meist benutzte als auch das meist verbreitete.  
+		Code Blocks 12.** : Weil sich einige Mitglieder positiv darüber ausgesprochen haben.
+		
+		
+		
+		
+	\section{Hardware}
+		
+		
+		Die Software wird auf normalen PCs entwickelt und ist auch ausschließlich für jene gedacht.
+		
+		
+		
+\chapter{Projektplanung}
+
+
+
+	
+	
+\end{document}
