@@ -17,7 +17,7 @@ int main()
     std::string variable;
    // std::thingToWrite;
     variable = "contact=";
-      ifstream myfile ("example.txt");
+      ifstream myfile ("freelan.txt");
       if (myfile.is_open())
       {
         while ( getline (myfile,line) )
@@ -32,11 +32,10 @@ int main()
         }
        //cout<<thingToWrite<<'\n';
         myfile.close();
-      }
-
-      else cout << "Unable to open file";
-
-      return 0;
+      }else
+          cout << "Unable to open file\n";
+      system("pause");
+      return 1;
 }
 
 
