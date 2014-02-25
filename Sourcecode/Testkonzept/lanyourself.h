@@ -17,10 +17,23 @@ public:
     ~LanYourself();
 private slots:
     void Connect();
-    void ProNew();
+    void Save();
     void ProLoad();
+    void setParam();
+    QStringList getParam();
+    QString getNewLine();
+    QString getOldLine();
+    void setOldLine(QString value);
+    void setNewLine(QString value);
+    const char* toCharP(QString value);
+    std::fstream& GotoLine(std::fstream& file, int num);
+    int getLineNumber();
+    void setLineNumber(int lineN);
 private:
     Ui::LanYourself *ui;
+    QString oldLine;
+    QString newLine;
+    int lineN;
 };
 
 

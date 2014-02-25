@@ -14,12 +14,14 @@ TEMPLATE = app
 
 SOURCES +=  main.cpp\
             lanyourself.cpp \
-            verbunden.cpp
+            verbunden.cpp \
+            configeditor.cpp
 
 HEADERS  += lanyourself.h \
             verbunden.h \
-    ../main.h
+            main.h \
+            configeditor.h
 
 FORMS    += verbunden.ui \
-            lanyourself.ui \
+            lanyourself.ui
 
