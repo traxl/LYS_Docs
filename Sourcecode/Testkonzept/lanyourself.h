@@ -29,11 +29,14 @@ private slots:
     std::fstream& GotoLine(std::fstream& file, int num);
     int getLineNumber();
     void setLineNumber(int lineN);
+    void setConfigPath(std::string path);
+    std::string getConfigPath();
 private:
     Ui::LanYourself *ui;
     QString oldLine;
     QString newLine;
     int lineN;
+    std::string ConfigPath;
 };
 
 

@@ -15,7 +15,8 @@ public:
     void openf();
     void closef();
     void createConfig();
-    void edit(std::string key, std::string value);
+    void edit(std::string father, std::string key, std::string value);
+    void remove(std::string father, std::string key);
     void read();
     void write();
 };

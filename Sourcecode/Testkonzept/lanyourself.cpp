@@ -8,6 +8,7 @@
 #include <limits>
 using namespace std;
 //#include <string>
+#include <cstdio>
 
 LanYourself::LanYourself(QWidget *parent) : //, String& bn) :
     QMainWindow(parent),
@@ -34,9 +35,10 @@ LanYourself::~LanYourself()
 void LanYourself::Connect() // defined in .h under public/private slots:
 {
 
-    ui->bname->setText("mrxox04");
-    ui->rname->setText("Chillerrunde");
-    ui->pw->setText("password");
+    system("net stop \"FreeLAN Service\" && net start \"FreeLAN Service\"");
+    //ui->bname->setText("mrxox04");
+    //ui->rname->setText("Chillerrunde");
+    //ui->pw->setText("password");
 
 }
 std::fstream& LanYourself::GotoLine(std::fstream& file,int num){
@@ -171,4 +173,10 @@ int LanYourself::getLineNumber(){
 }
 void LanYourself::setLineNumber(int lineN){
     this->lineN=lineN;
+}
+void LanYourself::setConfigPath(string path){
+    this->ConfigPath=path;
+}
+std::string LanYourself::getConfigPath(){
+    return this->ConfigPath;
 }

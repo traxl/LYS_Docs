@@ -23,5 +23,6 @@ HEADERS  += lanyourself.h \
             configeditor.h
 
 FORMS    += verbunden.ui \
-            lanyourself.ui
+            lanyourself.ui \
+            form.ui
 

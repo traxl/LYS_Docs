@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>264</width>
+    <width>260</width>
     <height>311</height>
    </rect>
   </property>
@@ -151,14 +151,14 @@
       <widget class="QPushButton" name="ProNew">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>20</x>
          <y>80</y>
          <width>71</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string>Speichern</string>
+        <string>Neues Profil</string>
        </property>
       </widget>
       <widget class="QToolButton" name="ProLoad">
@@ -190,14 +190,14 @@
       <widget class="QPushButton" name="setButton">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>100</x>
          <y>80</y>
-         <width>71</width>
+         <width>91</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string>Setzen</string>
+        <string>Profil bearbeiten</string>
        </property>
       </widget>
      </widget>
