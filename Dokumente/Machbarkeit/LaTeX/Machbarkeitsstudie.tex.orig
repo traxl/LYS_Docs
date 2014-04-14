@@ -1,0 +1,287 @@
+\documentclass[a4paper,12pt]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+%\usepackage{\textit{graphicx\textit{\textit{}}}} <- ??
+\usepackage{graphicx}
+
+
+
+\begin{document}
+
+
+\author{Dominik Backhausen\and Daniel Dimitrijevic\and Alexander Rieppel\and Thomas Traxler}
+\title{Machbarkeitsstudie\\ LAN Yourself}
+\date{09.10.2013}
+\maketitle
+\tableofcontents
+
+
+
+\chapter{Projekt-Team}
+	
+	Name:Dominik Backhausen\\
+	    Fähigkeiten:Java, Html, C/C++, SQL\\\\
+	  	Name:Daniel Dimitrijevic
+	\\ 	Fähigkeiten: Java, Html,C/C++, SQL    
+	\\
+	\\  Name:Alexander Rieppel
+	\\
+	    Fähigkeiten:Java, Html, C/C++, SQL
+	    \\
+	    \\
+	    Name:Thomas Traxler
+	    \\
+	    Fähigkeiten:Java, XML, C/C++, SQL
+	    \\
+\chapter{Projektbeschreibung}
+Ziel dieses Projektes ist es eine einfach zu bedienende, performante und möglichst gut kompatible VPN-Software zu entwickeln welche auf Peer-to-Peer Technologie basiert.\\
+
+<<<<<<< HEAD
+Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwarelösungen auf diesem Gebiet, jedoch sind diese was den Funktionsumfang betrifft oft nicht zufriedenstellend. Dieses Produkt beinhaltet zwar ebenfalls keine grundlegend neuen Funktionen, allerdings sind diese nach Ermessen des Projektteams in dieser Kombination noch nicht existent. Wie bereits erwähnt wird besonderer Wert auf Performance, Kompatibilität und Bedienbarkeit gelegt. Deshalb eignet sich die Software besonders für Benutzer, die über wenig Know-How verfügen und ein schnell einzurichtendes und performantes VPN-Netzwerk benötigen. Jedoch sind die Einsatzmöglichkeiten sehr breit gefächert, was auch einen Einsatz als Firmen-VPN-Software nicht ausschließt oder Benutzer die spezielle Einstellungen für den Einsatz ihres Programms innerhalb des VPN-Netzwerks benötigen. Zu diesem Anlass wird es ebenfalls die Möglichkeit geben, die Konfigurationsdateien manuell zu bearbeiten um erweiterte Funktionen des VPNs zu nutzen.\\
+=======
+Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwarelösungen auf dem Gebiet, jedoch sind diese was den Funktionsumfang betrifft oft nicht zufriedenstellend. Dieses Produkt beinhaltet zwar ebenfalls keine grundlegend neuen Funktionen, allerdings sind diese nach Ermessen des Projektteams in dieser Kombination noch nicht existent. Wie bereits erwähnt wird besonderer Wert auf Performance, Kompatibilität und Bedienbarkeit gelegt. Deshalb eignet sich die Software besonders für Benutzer, die über wenig Know-How verfügen und ein schnell einzurichtendes und performantes VPN-Netzwerk benötigen, worüber auf verschiedenste Weisen kommuniziert werden kann. Jedoch sind die Einsatzmöglichkeiten sehr breit gefächert, was auch einen Einsatz als Firmen-VPN-Software nicht ausschließt oder Benutzer die spezielle Einstellungen für den Einsatz ihres Programms innerhalb des VPN-Netzwerks benötigen. Zu diesem Anlass wird es weiterhin Konfigurationsdateien geben, welche sich speziell an erfahrene Benutzer richten und Funktionen wie z.b. IP-Adressenwahl, Portwahl, Protokolltyp etc. bietet.\\
+>>>>>>> 97c41e3d01cbb8a7774366347538c3dd81b0d4c6
+
+
+\chapter{Voruntersuchung des Produkts}
+	\section{Ist-Erhebung}
+	
+	Als VPN\footnote{Virtual Privacy Network} wird ein verschlüsseltes privates Netzwerk bezeichnet, dass prinzipiell über einen eigenen Server aufgebaut wird und von diesem verwaltet wird. Eine Ausnahme stellt die Möglichkeit der Direktverbindung von Benutzer zu Benutzer dar und wird deshalb als Peer-to-Peer bezeichnet. Bei diesem Verfahren gibt es keinen Server der die Verbindungen verwaltet, sondern dieses Management übernimmt jeder Benutzer für sich selbst. Allerdings ist es auch verbreitet sich auf bestimmte Einstellungen, wie bspw. IP-Adressbereich, pauschal zu einigen. Ebenfalls existiert die Möglichkeit einen VPN hybrid aufzubauen, sodass zwar ein Server am Verbindungsaufbau geringfügig beteiligt ist, allerdings bei der Verbindung selbst keine Rolle mehr spielt. Auf dieses virtuelle Netzwerk haben ausschließlich die Teilnehmer dessen Zugriff und es verspricht darüber hinaus eine hohe Sicherheit durch Verschlüsselung, die bis zu einem gewissen Grad nicht zurückverfolgt werden kann. Allerdings kann ein VPN auch dazu genutzt werden gewisse Barrieren zu umgehen, um z.B. eine Verbindung mit dem Intranet einer Firma herzustellen und dort auf einen lokalen Server zuzugreifen. Im Folgenden ist eine Marktanalyse ausgeführt um existente Dienste und ihre Schwächen aufzuzeigen:
+	
+	\subsection{Hamachi} ist ein gehosteter VPN-Service, über welchen Benutzer miteinander durch virtuelle Netzwerke miteinander verbunden werden können. Es erlaubt mehrere solcher Netzwerke zu erstellen und zu verwalten und basiert prinzipiell zu einem großen Teil auf Peer-to-Peer. Erst wenn keine direkte Verbindung hergestellt werden kann wird der Client über einen Server mit dem restlichen Netzwerk verbunden. Ein großer Nachteil hierbei ist, dass, durch die Verbindung mit einen Server, die Kompatibilität mit anderen Programmen leidet. Der Grund dafür ist, dass Hamachi offenbar keine Ports zu den entsprechenden Nutzern weiterleitet und somit andersartige Dienste, die nicht Port 80 verwenden, schlicht ignoriert werden. Darüber hinaus ist der Benutzer hiermit auch an die Leistungsfähigkeit und Verbindungsgeschwindigkeit der Server gebunden, den er sich im Normalfall mit anderen Benutzern teilen muss. Dies hat unter Umständen zur Folge, dass die Verbindung, unter hoher Serverlast, sehr langsam wird oder nicht mehr funktioniert. Ein weiterer großer Nachteil des Dienstes ist, dass in der kostenlosen Version, sich nur eine begrenzte Anzahl von Benutzern in ein Netzwerk einloggen können. Da diese Obergrenze sehr gering ist, wird ein vernünftiges Arbeiten im Netzwerk teilweise nicht mehr möglich. Abgesehen davon ist die Benutzbarkeit des GUI zwar vergleichsweise gut, jedoch ist die allgemeine Geschwindigkeit des Programms selbst eher schlecht zu bewerten. 
+	
+	\subsection{OpenVPN GUI} bietet eine grafische Oberfläche zur bekannten VPN-Lösung OpenVPN. Sie ist minimalistisch gehalten und bietet nur wenige Einstellungen, wie Proxy und Sprache. Alle anderen Einstellungen sind ausschließlich in dem, für die Verbindung vorgesehenen, OpenVPN Config-File zu tätigen. Bereits hier besteht die Möglichkeit, dass sich unerfahrene Benutzer bereits überfordert sehen. Zwar existieren im Netz diverse Config-File Editoren um die Files zu erstellen und zu editieren, allerdings sind auch diese nicht immer leicht zu handhaben. Darüber hinaus ist ein eventuelles Troubleshooting, dass über eine triviale Neuinstallation hinaus geht, für einen unerfahrenen Benutzer einfach nicht zumutbar und erfordert auch von erfahreneren Benutzern oft mehrere Stunden Aufwand um ein Problem zu lösen. Auch die Meldungen in der Konsole der Anwendung sind für einen Laien alles andere als verständlich, was ein eventuelles Troubleshooting komplizierter macht. Abgesehen davon basiert OpenVPN in erster Linie auf einer Client-Server Architektur, wozu auch noch die Tatsache kommt, dass ein OpenVPN Server nicht gerade leicht zu installieren ist.
+	
+	\subsection{Tortilla} ist ein Tool für Windows um die Benutzung des Tor Netzwerkes einfacher zu gestalten. TOR funktioniert dezentral und wird von Freiwilligen betrieben die Bandbreite und Storage zur Verfügung stellen. Der Traffic wird nach dem Prinzip des Onion-Routings über sich ändernde Routen gesendet und wird auch zwischen den beteiligten Netzwerkteilnehmern verschlüsselt. TOR oder Tortilla hat mit diesem Projekt in seiner Grundform nur wenig zu tun und deckt auch ein völlig anderes Gebiet ab. Allerdings ist Tortilla trotzdem wert analysiert zu werden, da eine Implementierung von TOR bzw. Onion-Routing, in die Software, die aus diesem Projekt hervorgeht, nicht ausgeschlossen ist und deshalb den selben Nutzen bietet.
+	
+	\subsection{ShellfireVPN} ist ein VPN-Dienst der in der kostenlosen Version, ausschließlich eine Unterstützung für Windows bietet und in seiner Funktionalität sehr eingeschränkt ist. Auch die Bandbreite und Sicherheit ist in der kostenlosen Version stark begrenzt. Darüber hinaus basiert ShellfireVPN auf OpenVPN und damit auf einer Server-Client Architektur. Wenn mehr Bandbreite gefordert ist, wird der Dienst kostenpflichtig. Im Gegensatz zu diesem Dienst zeichnet sich unsere Software wiederum dadurch aus, dass sie ohne Server auskommen wird, d.h. auf Peer-to-Peer Prinzip basiert. Des weiteren hebt sie sich auch deswegen ab, da sie, was die Bandbreite betrifft, grundsätzlich keine Grenzen hat solange die Benutzer die entsprechende Bandbreite und ihre Internetverbindung von sich aus zur Verfügung stellen. Auch hat der Benutzer in der kostenlosen Version von ShellfireVPN ausschließlich Zugang zu Servern in Deutschland. Der einzige Punkt wo der Dienst mit unserer Software grundsätzlich gleichzieht ist die Benutzerfreundlichkeit, welche gemessen an anderen Lösungen überdurchschnittlich ist.
+	
+	\subsection{CyberGhost VPN} ist ein weiterer Dienst der auf OpenVPN aufsetzt und in der kostenlosen Version eingeschränkte Funktionalität und begrenzte Bandbreite bietet. Benutzerfreundlichkeit ist ebenfalls gemessen an anderen Lösungen überdurchschnittlich und auch ist der Vorgang der im Hintergrund abläuft speziell für den Laien abstrahiert. Auch hier fallen zusätzliche Kosten für mehr Bandbreite an und man ist an die Verfügbarkeit der Server in den entsprechenden Ländern gebunden. Im Direktvergleich, hat die geplante Software ähnliche Vorteile gegenüber diesem Dienst wie gegenüber ShellFireVPN. Zusammengefasst: basiert auf Peer-to-Peer, prinzipiell keine Bandbreitenbeschränkungen, grundsätzlich nicht an Verfügbarkeiten in bestimmten Ländern gebunden.
+	
+		
+	\section{Soll-Zustand}
+		
+		\subsection{Allgemeine Beschreibung}
+		
+		Im Rahmen des Projektes soll eine leicht bedienbare Software entwickelt werden, die den Aufbau eines virtuellen lokalen Netzwerkes sicherstellt. Wichtig ist dabei, dass diese Software nicht auf einer Server-Client Architektur basiert, sondern als Peer-to-Peer Lösung realisiert wird. Allerdings ist eine hybride Lösung ebenfalls nicht ausgeschlossen. Dies bedeutet, dass ein Server zwar am eigentlichen Verbindungsaufbau in geringem Maße (z.B. Client Lokalisation) im Einsatz ist, allerdings an der Verbindung selbst nicht mehr beteiligt ist. Dabei ist zu beachten, dass es kein Ziel ist die VPN-Lösung selbst zu entwickeln, sondern lediglich die Verwaltungssoftware, eine zugehörige Benutzeroberfläche und die Funktionalitäten die auf eine bestehende VPN-Lösung aufgesetzt werden.
+		
+		Zu den wichtigsten Punkten gehören gute Kompatibilität und Performance die grundsätzlich zu jeder Zeit von der Software gewährleistet werden muss. Um dies sicherzustellen kann die Konfiguration der eigentlichen VPN-Basis zu jeder Zeit über das geplante Programm geändert werden. Da die Software auch für Benutzer mit wenig Erfahrung gedacht ist, wird sehr viel wert auf eine intuitive und möglichst dezente Benutzeroberfläche gelegt.
+		
+			
+		\subsection{Muss-Ziele}
+		\begin{itemize}
+		\item Peer-to-Peer Prinzip
+		\item Erstellung von VANs
+		\item intuitives GUI-Design
+<<<<<<< HEAD
+=======
+		\item Profilmanager für verschiedene Profile
+		\item Konfigurationsdateien für erweiterte Einstellungen
+>>>>>>> 97c41e3d01cbb8a7774366347538c3dd81b0d4c6
+		\item Netzwerkteilnehmerliste
+		\item Senden von Textnachrichten
+		\end{itemize}
+		
+			
+		\subsection{Kann-Ziele}
+			\begin{itemize}
+			\item Weiterleitung der Internetverbindung
+			\item Einstellung ob die Internetverbindung des LAN-Netzwerks oder die eigene verwendet werden soll
+			\item Zugriffspunkt für die Internetverbindung im VAN nach bestimmten Kriterien aussuchen lassen, wobei dies entweder manuell oder über einen Algorithmus erfolgen kann
+			
+			\item Ports am Internetzugriffspunkt zu bestimmten Netzwerkteilnehmern weiterleiten
+			\item Gemeinsame Ordner erstellen und bestimmten Netzwerkteilnehmern freigeben
+			
+			\item Onion-Routing (Pfadauswahl auch durch Kriterien möglich)
+			
+			\end{itemize}
+			
+		\subsection{Nicht-Ziele}
+			Es ist kein Ziel die Software nach ihrer Fertigstellung zu vermarkten, oder auf einer eigenen VPN-Lösung aufzusetzen. Die Software wird ausschließlich auf Open-Source Lösungen zurückgreifen und in ihrer Grundform kostenlos zur Verfügung stehen. Des Weiteren ist es zwar möglich, dass die Software nach der Fertigstellung weiterhin durch das Projektteam betreut wird, allerdings ist diese eventuelle Weiterführung nicht Teil des Projektes.
+			
+	\section{Festlegen der Hauptfunktionen}
+		\textbf{/HF10/ Verbinden mit einem VAN bzw. VAN erstellen}
+		
+		Jeder Benutzer kann sich mittels eines Benutzernamens erkennbar machen, Identifikation erfolgt jedoch mittels anderer Parameter (IP/ID). Das Programm selbst wird nur gestartet.\\
+		Anm.: Jedes VAN identifiziert sich durch eine Kombination aus Namen und der 'Summe' aller beteiligten Knotenpunkte. Verwendet ein Benutzer hierbei eine nicht vorhandene Kombination, gleicht dies dem Erstellen eines neuen Netzwerks. \\
+		
+		
+		\textbf { /HF40/ Netzwerkteilnehmer anzeigen
+		}\\
+		Umfasst die Anzeige von:
+		\begin{itemize}
+		
+	
+		\item Latenzzeit
+		\item Berechtigungen
+		\item IP-Adresse
+		\item Nickname
+		\item Zugriffspunkt (ja/nein) \footnote{Kannziel}\\
+			\end{itemize}
+		
+		
+		
+		
+		
+		\textbf {/HF50/ Textnachrichten an Netzwerkteilnehmer senden}
+		\\Auch eine Kommunikation über Textnachrichten unter den Teilnehmern wird möglich sein.
+		
+		 \textbf {/HF60/ Programmprofil hinzufügen/bearbeiten}
+		\\Programmkompatibilität und Performanz sind einer der wichtigsten Ziele der Software. Um dies auch für Programme zu ermöglichen die spezielle Einstellungen erfordern, wird es die Möglichkeit geben Programmprofile zu erstellen und zu bearbeiten.
+		
+	\section{Festlegung der Nebenfunktionen}
+	\textbf { /NF10/ Internetverbindung im VAN freigeben} 
+	\\Ein Teil oder der gesamte Internettraffic (falls nur ein Teilnehmer seine Internetverbindung freigegeben hat), den andere Teilnehmer produzieren, wird über diese Verbindung geroutet.
+			
+	\textbf {/NF20/ Mit dem Internet verbinden} 
+	\\Der Benutzer kann festlegen ob er standardmäßig seine eigene Internetverbindung oder über einen Zugriffspunkt\footnote{Der Zugriffspunkt ist hier ein User der zur Verbindung mit dem Internet dient, d.h. seine Internetverbindung freigegeben hat} in seinem VAN ins Internet gehen möchte.
+	
+	\textbf {/NF30/ Netzwerkteilnehmer für Internetverbindung nach Kriterien auswählen lassen}
+	
+	\textbf {/NF31/ Netzwerkteilnehmer für Internetverbindung manuell auswählen}
+	\\Es soll möglich sein einen bestimmten Netzwerkteilnehmer, aus dem Pool der Teilnehmer die ihre Verbindung freigegeben haben auszuwählen, um über diesen Teilnehmer eine Internetverbindung aufzubauen.
+	
+	\textbf {/NF32/ Netzwerkteilnehmer für Internetverbindung nach Algorithmus bestimmen}
+	\\Ebenfalls soll es möglich sein den optimalen Netzwerkteilnehmer automatisch nach einem bestimmten Kriterium (Latenzzeit, zur Verfügung stehende Bandbreite, etc.) auswählen zu lassen.
+	
+	\textbf {/NF40/ Ports weiterleiten}
+	\\Ein Netzwerkteilnehmer der gleichzeitig einen Zugriffspunkt für andere Teilnehmer zur Verfügung stellt, kann spezielle Ports zu bestimmten Teilnehmern weiterleiten, sofern diese das bestätigen.\\
+	
+	\textbf {/NF50/ Gemeinsamen Ordner erstellen}
+	\\Eine weitere Funktion ist das Erstellen eines gemeinsamen Ordners, der innerhalb des Netzwerks freigegeben werden kann. Zusätzlich wird es möglich sein Berechtigungen für diesen Ordner festzulegen und die Benutzer auszuwählen, die auf ihn zugreifen dürfen.
+	
+	\textbf {/NF60/ Onion-Routing aktivieren}
+	\\Für fortgeschrittene Benutzer wird es die Möglichkeit geben die Verbindung durch das Routen über mehrere verschiedene Netzwerkteilnehmer umzuleiten, um so eine gewisse Anonymität zu gewährleisten. Aus dem Pool der Teilnehmer die eine Weiterleitung der Daten anderer Benutzer in ihren Einstellungen zugestimmt haben, wird die Route automatisch definiert.
+	
+	\textbf {/NF61/ Route nach Kriterien auswählen lassen}
+	\\Zusätzlich ist es möglich die optimale Route, mit Berücksichtigung gewisser Kriterien (Latenzzeit,Bandbreite, Sicherheit etc.), ermitteln zu lassen
+	
+	\textbf {/NF70/ Erweiterte Einstellungen für erfahrene Benutzer}
+	\\Hier werden Einstellungen zu finden sein die besonders für erfahrene Benutzer interessant sein werden, z.B. Internetfreigabe, Portweiterleitung, Onion-Routing, etc.
+	
+	\textbf {/NF80/ Netzwerkteilnehmer ignorieren}	
+	\\Ein Netzwerkteilnehmer kann andere Netzwerkteilnehmer von der Software ignorieren lassen. Dies bedeutet, dass die Kommunikation über das Netzwerk zwischen diesen Teilnehmern nicht länger möglich ist solange diese Sperre besteht.
+	
+	\section{Festlegen der Hauptdaten}
+	\textbf {/HD10/ Nickname}
+	
+	Gespeicherter Nicknamen\\
+	\textbf {/HD20/ Gespeicherte VANs}
+	
+	VANs die der Benutzer für die spätere Verwendung abgespeichert hat\\
+	\textbf {/HD30/ Einstellungen}
+	
+	Vorgenommene Einstellungen in der Software\\
+	\textbf {/HD40/ Programmprofile}
+	
+	Profile für Programmkompatibilität
+	
+	
+	\section{Festlegen der Hauptleistungen}
+	
+	   \textbf{/LL10/ Optimierter Datenverkehr durch Peer-to-Peer}
+		
+		Da hier keine Server-Client Architektur verwendet wird, ist auch der Datenverkehr, der über einen einzigen Netzwerkteilnehmer geführt wird, deutlich geringer.\\
+		\textbf {/LL20/ Hohe Erweiterbarkeit der Software}
+		
+		Das Endprodukt soll die Bedingungen der einfachen Wartbarkeit und Erweiterbarkeit erfüllen. Dies bedeutet das Softwarecode sowohl verständlich geschrieben als auch gut dokumentiert ist, außerdem werden die Programmteile einer klaren Aufteilung unterliegen.\\
+		\textbf {/LL30/ Hohe Kompatibilität zu verschiedenen Programmen}
+		
+		Bei der Entwicklung der Software wird besonders darauf geachtet, dass sie mit verschiedenen Programmen kompatibel ist. Da dies natürlich nicht immer vom Programm selbst gewährleistet werden kann, wird es hierfür einen Profilmanager geben. Dieser ist speziell dafür gedacht Programmprofile zu Programmen zu erstellen die eine spezielle Konfiguration des Netzwerks oder des Netzwerkteilnehmers erfordern.\\
+		\textbf {/LL40/ Hohe Performanz}
+		
+		Hiermit ist sowohl Performanz innerhalb des Programms, als auch im Netzwerk gemeint.
+	\section{Festlegen der wichtigsten Aspekte der Benutzerschnittstelle}
+		
+	Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche, in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden. Deshalb wird das Programm besonders intuitiv und simpel verwendbar und die wichtigsten Funktionen möglichst einfach zu erreichen sein. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann direkt nach dem Start  verwendet werden.
+	
+	
+		
+	\section{Festlegen der wichtigsten Qualit\"atsmerkmale}
+		\begin{itemize}
+			\item {\LARGE\textbf{Sicherheit}}\\
+		Das Produkt wird stark auf den Einsatz durch viele Benutzer zugeschnitten. Um in dieser Gemeinschaft dem Abhören von übertragene Daten durch Außenstehende vorzubeugen, wird besonders auf gute Sicherheitslösungen und Verschlüsselungsmechanismen viel Wert gelegt. 
+			\item {\LARGE\textbf{Benutzbarkeit}}\\
+			Bei der Entwicklung wird äußerst viel Wert auf eine intuitive und einfache GUI gelegt, die sowohl was die Performanz, als auch das Design angeht schöne Ergebnisse liefert und damit in erster Linie dem Benutzer zugute kommt. 
+			
+			\item {\LARGE\textbf{Effizienz}}\\
+		Da bei unserem Programm  mit vielen Benutzer gerechnet wird und diese  viele Daten verschicken, muss unser Programm  imstande sein diese Netzwerklast handeln. Weiters ist es notwendig, dass die Software selbst zeitkritische Aktionen priorisiert und daher schnell und effizient abarbeitet. Daher wird bereits bei der Code- und GUI-Entwicklung auf schnelle Befehlsdurchführung wert gelegt.
+		
+		
+			\item {\LARGE\textbf{Erweiterbarkeit}}\\
+		Wie bereits bei den Hauptleistungen erwähnt, ist vorgesehen das Programm so zu schreiben, dass zukünftige Erweiterungen der Software leicht möglich sind. Durch Beachtung der Gängigen Programmierregeln werden wir es ermöglichen das Programm einfach erweiterbar zu gestalten.
+		
+			\item {\LARGE\textbf{Übertragbarkeit}}	\\
+			Da wir uns entscheiden haben das Programm für Windows zu optimieren, legen wir in weiterer Hinsicht weniger Wert auf die Übertragbarkeit der Software.
+			
+			\end{itemize}
+\chapter{Durchf\"uhrbarkeitsuntersuchung}
+	
+	\section{Pr\"ufen alternativer L\"osungsvorschl\"age}
+	
+		\subsection{Programmiersprachen}
+		
+	Da dieses Projekt auf einem bereits bestehenden Programm aufsetzt ist die Programmiersprache zu einem gewissen Grad vorgegeben. Es besteht zwar durchaus die Möglichkeit auch andere Sprachen zu verwenden, das verursacht jedoch Aufwand der keine ausreichenden Vorteile bieten kann-
+	Dieses Projekt wird daher in C++ umgesetzt.
+	
+		
+		
+		
+			
+	\section{Pr\"ufen der technischen Durchf\"uhrbarkeit}
+		
+		\subsection{Softwaretechnische Durchf\"uhrbarkeit}
+		Socks: Ermöglicht die leichte port weiterleitung falls es mit der Einbindung von SSL-clienst nicht richtig Funktionniert
+		SSL: Ermöglicht eine sichere Verbindung mit den anderen Nodes.
+		
+			
+		\subsection{Hardwaretechnische Durchf\"uhrbarkeit}
+			
+		Da dieses Projekt grundsätzlich keine speziellen hardwaretechnischen Ansprüche stellt, 
+		kann die hardwaretechnische Durchführbarkeit entfallen und muss nicht geprüft werden.
+		
+			
+		\subsection{Verfügbarkeit von Entwicklungs- und Zielmaschinen}
+			
+	Die Software wird auf normalen PCs entwickelt und ist auch ausschließlich für jene gedacht. Deshalb ist die Verfügbarkeit von Entwicklungs- und Zielmaschinen, für die Fertigstellung und den Einsatz der Software, irrelevant da zu jedem Zeitpunkt des Projektes mindestens zwei PC uns zur Verfügung stehen werden.
+			
+	\section{Pr\"ufen der personellen Durchf\"uhrbarkeit}
+		
+		\subsection{Qualifikation der Fachkr\"afte}
+			
+		
+	Das gesamte Projektteam kann bereits mit einiger netzwerktechnischen Erfahrung aufwarten und hat sich ebenfalls bereits mit VPN-Software verschiedenster Art in der Vergangenheit beschäftigt. Darüber hinaus verfügt das Team über ein hohes Maß an softwaretechnischem Wissen und hat bereits Erfahrung mit einigen Programmiersprachen. Da die Software zum größten Teil, wenn nicht sogar zur Gänze, in C++ geschrieben wird und das Team schon einige Erfahrung mit dieser Programmiersprache gemacht hat, sieht es sich imstande das Projekt zu einem erfolgreichen und zufriedenstellenden Ende führen.
+	
+		
+		\subsection{Zusammenarbeit der Teammitglieder}
+		
+		
+	Da die Teammitglieder schon öfters in dieser Gruppenzusammensetzung gearbeitet haben und es sich daher als eingespieltes Team bezeichnen kann, geht das Team davon aus, dass dies auch in diesem Projekt zu einem positiven Abschluss beiträgt.
+	
+	Weiters wurden bereits im Vorfeld möglichst effiziente Organisationsstrukturen und Kommunikationsplattformen geschaffen, welche der Effizienz der Projektarbeit eine Steigerung verschaffen sollten.
+	
+			
+	\section{Risikoanalyse}
+		
+		\subsection{Personelle Risiken}
+	Da dieses Projekt von einem Team, bestehend aus 4 Mitgliedern, bearbeitet wird und der schlimmste Fall, das mehrere Teammitglieder über einen größeren Zeitraum gleichzeitig ausfallen, eher eine  Ausnahme darstellt, sehen wir keine größeren Personellen Risiken an diesem Projekt.
+	
+		
+		\subsection{Technische Risiken}
+	Neben technischen Risiken wie zu hoch gesteckte Ziele und zu geringes technisches Know-How, welche als eher gering eingestuft werden können, ist das Risiko, bezüglich des  verwendeten VPN-Treiberst, umso höher. Auf diesen hat das Projektteam in Funktionsweise und -umfang kaum bis keinen Einfluss und muss sich voll und ganz auf ihn verlassen können. Mögliche Risiken die es beim verwendeten VPN-Treiber zu berücksichtigen gilt, sind fehlender Funktionsumfang, nicht vorhergesehene Funktionsweisen oder zu hoher Aufwand um bestimmte Projektziele, mit dem Treiber als Grundlage, zu erreichen. Deshalb ist die Auswahl eines geeigneten VPN-Treibers besonders essenziell, um das Risiko dahingehend möglichst zu minimieren. 
+		
+			
+\chapter{Nutzenanalyse}
+	
+	\section{Nutzen f\"ur den Kunden}
+	
+	Die Software wird sich von anderen Lösungen auf diesem Gebiet vor allem dadurch abheben, dass sie eine höhere Programmkompatibilität bietet, mit welcher andere Programme schlichtweg nicht mithalten können. Gleichzeitig wird die Software auch mit einer höheren Effizienz und Stabilität aufwarten können, was sie zusätzlich auszeichnet.
+	
+	\section{Nutzen f\"ur das Projektteam}
+	
+	Der Nutzen für das Team besteht in erster Linie in der Aneignung neuer Erfahrungen und Fähigkeiten in den Bereichen der Teamarbeit, Projektarbeit sowie Java-Programmierung. Ebenso wird das Team durch die genaue Auseinandersetzung mit VPN und Load-Balancing auch dahingehend einige Informationen und Erfahrungen sammeln.
+	
+
+\end{document}
