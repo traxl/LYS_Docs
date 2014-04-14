@@ -38,7 +38,11 @@
 \chapter{Projektbeschreibung}
 Ziel dieses Projektes ist es eine einfach zu bedienende, performante und möglichst gut kompatible VPN-Software zu entwickeln welche auf Peer-to-Peer Technologie basiert.\\
 
+<<<<<<< HEAD
 Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwarelösungen auf diesem Gebiet, jedoch sind diese was den Funktionsumfang betrifft oft nicht zufriedenstellend. Dieses Produkt beinhaltet zwar ebenfalls keine grundlegend neuen Funktionen, allerdings sind diese nach Ermessen des Projektteams in dieser Kombination noch nicht existent. Wie bereits erwähnt wird besonderer Wert auf Performance, Kompatibilität und Bedienbarkeit gelegt. Deshalb eignet sich die Software besonders für Benutzer, die über wenig Know-How verfügen und ein schnell einzurichtendes und performantes VPN-Netzwerk benötigen. Jedoch sind die Einsatzmöglichkeiten sehr breit gefächert, was auch einen Einsatz als Firmen-VPN-Software nicht ausschließt oder Benutzer die spezielle Einstellungen für den Einsatz ihres Programms innerhalb des VPN-Netzwerks benötigen. Zu diesem Anlass wird es ebenfalls die Möglichkeit geben, die Konfigurationsdateien manuell zu bearbeiten um erweiterte Funktionen des VPNs zu nutzen.\\
+=======
+Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwarelösungen auf dem Gebiet, jedoch sind diese was den Funktionsumfang betrifft oft nicht zufriedenstellend. Dieses Produkt beinhaltet zwar ebenfalls keine grundlegend neuen Funktionen, allerdings sind diese nach Ermessen des Projektteams in dieser Kombination noch nicht existent. Wie bereits erwähnt wird besonderer Wert auf Performance, Kompatibilität und Bedienbarkeit gelegt. Deshalb eignet sich die Software besonders für Benutzer, die über wenig Know-How verfügen und ein schnell einzurichtendes und performantes VPN-Netzwerk benötigen, worüber auf verschiedenste Weisen kommuniziert werden kann. Jedoch sind die Einsatzmöglichkeiten sehr breit gefächert, was auch einen Einsatz als Firmen-VPN-Software nicht ausschließt oder Benutzer die spezielle Einstellungen für den Einsatz ihres Programms innerhalb des VPN-Netzwerks benötigen. Zu diesem Anlass wird es weiterhin Konfigurationsdateien geben, welche sich speziell an erfahrene Benutzer richten und Funktionen wie z.b. IP-Adressenwahl, Portwahl, Protokolltyp etc. bietet.\\
+>>>>>>> 97c41e3d01cbb8a7774366347538c3dd81b0d4c6
 
 
 \chapter{Voruntersuchung des Produkts}
@@ -71,7 +75,11 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 		\item Peer-to-Peer Prinzip
 		\item Erstellung von VANs
 		\item intuitives GUI-Design
+<<<<<<< HEAD
+=======
+		\item Profilmanager für verschiedene Profile
 		\item Konfigurationsdateien für erweiterte Einstellungen
+>>>>>>> 97c41e3d01cbb8a7774366347538c3dd81b0d4c6
 		\item Netzwerkteilnehmerliste
 		\item Senden von Textnachrichten
 		\end{itemize}
@@ -96,18 +104,20 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 	\section{Festlegen der Hauptfunktionen}
 		\textbf{/HF10/ Verbinden mit einem VAN bzw. VAN erstellen}
 		
-		Jeder Benutzer muss sich mittels eines Benutzernamens erkennbar machen, Identifikation erfolgt jedoch mittels anderer Parameter (IP und Host-File). \\
+		Jeder Benutzer kann sich mittels eines Benutzernamens erkennbar machen, Identifikation erfolgt jedoch mittels anderer Parameter (IP/ID). Das Programm selbst wird nur gestartet.\\
+		Anm.: Jedes VAN identifiziert sich durch eine Kombination aus Namen und der 'Summe' aller beteiligten Knotenpunkte. Verwendet ein Benutzer hierbei eine nicht vorhandene Kombination, gleicht dies dem Erstellen eines neuen Netzwerks. \\
 		
 		
-		\textbf {/HF20/ Netzwerkteilnehmer anzeigen
+		\textbf { /HF40/ Netzwerkteilnehmer anzeigen
 		}\\
 		Umfasst die Anzeige von:
 		\begin{itemize}
 		
 	
 		\item Latenzzeit
+		\item Berechtigungen
 		\item IP-Adresse
-		\item Benutzername
+		\item Nickname
 		\item Zugriffspunkt (ja/nein) \footnote{Kannziel}\\
 			\end{itemize}
 		
@@ -118,8 +128,8 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 		\textbf {/HF50/ Textnachrichten an Netzwerkteilnehmer senden}
 		\\Auch eine Kommunikation über Textnachrichten unter den Teilnehmern wird möglich sein.
 		
-		 \textbf {/HF60/ Konfigurationsdateien für erweiterte Einstellungen}
-		\\Dadurch wird erfahrenen Benutzern die Möglichkeit gegeben erweiterte Einstellungen, die in der VPN-Basis verfügbar sind, zu verwenden.
+		 \textbf {/HF60/ Programmprofil hinzufügen/bearbeiten}
+		\\Programmkompatibilität und Performanz sind einer der wichtigsten Ziele der Software. Um dies auch für Programme zu ermöglichen die spezielle Einstellungen erfordern, wird es die Möglichkeit geben Programmprofile zu erstellen und zu bearbeiten.
 		
 	\section{Festlegung der Nebenfunktionen}
 	\textbf { /NF10/ Internetverbindung im VAN freigeben} 
@@ -136,22 +146,37 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 	\textbf {/NF32/ Netzwerkteilnehmer für Internetverbindung nach Algorithmus bestimmen}
 	\\Ebenfalls soll es möglich sein den optimalen Netzwerkteilnehmer automatisch nach einem bestimmten Kriterium (Latenzzeit, zur Verfügung stehende Bandbreite, etc.) auswählen zu lassen.
 	
-	\textbf {/NF40/ Gemeinsamen Ordner erstellen}
+	\textbf {/NF40/ Ports weiterleiten}
+	\\Ein Netzwerkteilnehmer der gleichzeitig einen Zugriffspunkt für andere Teilnehmer zur Verfügung stellt, kann spezielle Ports zu bestimmten Teilnehmern weiterleiten, sofern diese das bestätigen.\\
+	
+	\textbf {/NF50/ Gemeinsamen Ordner erstellen}
 	\\Eine weitere Funktion ist das Erstellen eines gemeinsamen Ordners, der innerhalb des Netzwerks freigegeben werden kann. Zusätzlich wird es möglich sein Berechtigungen für diesen Ordner festzulegen und die Benutzer auszuwählen, die auf ihn zugreifen dürfen.
 	
-	\textbf {/NF50/ Netzwerkteilnehmer ignorieren}
+	\textbf {/NF60/ Onion-Routing aktivieren}
+	\\Für fortgeschrittene Benutzer wird es die Möglichkeit geben die Verbindung durch das Routen über mehrere verschiedene Netzwerkteilnehmer umzuleiten, um so eine gewisse Anonymität zu gewährleisten. Aus dem Pool der Teilnehmer die eine Weiterleitung der Daten anderer Benutzer in ihren Einstellungen zugestimmt haben, wird die Route automatisch definiert.
+	
+	\textbf {/NF61/ Route nach Kriterien auswählen lassen}
+	\\Zusätzlich ist es möglich die optimale Route, mit Berücksichtigung gewisser Kriterien (Latenzzeit,Bandbreite, Sicherheit etc.), ermitteln zu lassen
+	
+	\textbf {/NF70/ Erweiterte Einstellungen für erfahrene Benutzer}
+	\\Hier werden Einstellungen zu finden sein die besonders für erfahrene Benutzer interessant sein werden, z.B. Internetfreigabe, Portweiterleitung, Onion-Routing, etc.
+	
+	\textbf {/NF80/ Netzwerkteilnehmer ignorieren}	
 	\\Ein Netzwerkteilnehmer kann andere Netzwerkteilnehmer von der Software ignorieren lassen. Dies bedeutet, dass die Kommunikation über das Netzwerk zwischen diesen Teilnehmern nicht länger möglich ist solange diese Sperre besteht.
 	
 	\section{Festlegen der Hauptdaten}
-	\textbf {/HD10/ Benutzername}
+	\textbf {/HD10/ Nickname}
 	
-	Verwendeter Benutzername\\
-	\textbf {/HD20/ Gespeicherte Daten der anderen Netzwerkteilnehmer}
+	Gespeicherter Nicknamen\\
+	\textbf {/HD20/ Gespeicherte VANs}
 	
-	Daten wie IP-Adresse oder Ports die für die Verbindung verwendet werden sollen\\
+	VANs die der Benutzer für die spätere Verwendung abgespeichert hat\\
 	\textbf {/HD30/ Einstellungen}
 	
 	Vorgenommene Einstellungen in der Software\\
+	\textbf {/HD40/ Programmprofile}
+	
+	Profile für Programmkompatibilität
 	
 	
 	\section{Festlegen der Hauptleistungen}
@@ -164,21 +189,20 @@ Es existieren auf dem Markt zwar bereits ziemlich solide und ausgereifte Softwar
 		Das Endprodukt soll die Bedingungen der einfachen Wartbarkeit und Erweiterbarkeit erfüllen. Dies bedeutet das Softwarecode sowohl verständlich geschrieben als auch gut dokumentiert ist, außerdem werden die Programmteile einer klaren Aufteilung unterliegen.\\
 		\textbf {/LL30/ Hohe Kompatibilität zu verschiedenen Programmen}
 		
-		Bei der Entwicklung der Software wird besonders darauf geachtet, dass sie mit verschiedenen Programmen kompatibel ist.
+		Bei der Entwicklung der Software wird besonders darauf geachtet, dass sie mit verschiedenen Programmen kompatibel ist. Da dies natürlich nicht immer vom Programm selbst gewährleistet werden kann, wird es hierfür einen Profilmanager geben. Dieser ist speziell dafür gedacht Programmprofile zu Programmen zu erstellen die eine spezielle Konfiguration des Netzwerks oder des Netzwerkteilnehmers erfordern.\\
 		\textbf {/LL40/ Hohe Performanz}
 		
 		Hiermit ist sowohl Performanz innerhalb des Programms, als auch im Netzwerk gemeint.
-		
 	\section{Festlegen der wichtigsten Aspekte der Benutzerschnittstelle}
 		
-	Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche, in denen sich unerfahrene Benutzer nur sehr schwer zurechtfinden. Deshalb wird das Programm besonders intuitiv und simpel verwendbar sein.
+	Bestehende Programme haben oft eine unzureichend intuitive oder nicht ausreichend erklärte Benutzeroberfläche, in denen sich unerfahrene Benutzer oft nur sehr schwer zurechtfinden. Deshalb wird das Programm besonders intuitiv und simpel verwendbar und die wichtigsten Funktionen möglichst einfach zu erreichen sein. Die Software wird daher im Auslieferungszustand bereits ohne eine einzige Einstellung auskommen und kann direkt nach dem Start  verwendet werden.
 	
 	
 		
 	\section{Festlegen der wichtigsten Qualit\"atsmerkmale}
 		\begin{itemize}
 			\item {\LARGE\textbf{Sicherheit}}\\
-		Das Produkt wird stark auf den Einsatz durch viele Benutzer zugeschnitten. Um in dieser Gemeinschaft dem Abhören von übertragenen Daten durch Außenstehende vorzubeugen, wird besonders auf gute Sicherheitslösungen und Verschlüsselungsmechanismen viel Wert gelegt. 
+		Das Produkt wird stark auf den Einsatz durch viele Benutzer zugeschnitten. Um in dieser Gemeinschaft dem Abhören von übertragene Daten durch Außenstehende vorzubeugen, wird besonders auf gute Sicherheitslösungen und Verschlüsselungsmechanismen viel Wert gelegt. 
 			\item {\LARGE\textbf{Benutzbarkeit}}\\
 			Bei der Entwicklung wird äußerst viel Wert auf eine intuitive und einfache GUI gelegt, die sowohl was die Performanz, als auch das Design angeht schöne Ergebnisse liefert und damit in erster Linie dem Benutzer zugute kommt. 
 			
